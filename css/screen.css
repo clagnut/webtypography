@@ -1,0 +1,634 @@
+@import "/css/css3.css";
+
+
+BODY {
+	margin:0;
+	padding:0;
+	color: #000;
+	background: #FFF8E5;
+	font-size: 100%;
+	text-rendering: optimizeLegibility;
+}
+
+HTML>BODY, HTML>BODY#cover {
+	font-size: 16px;
+}
+
+ABBR, ACRONYM, .caps {
+	text-transform: lowercase;
+	font-variant:small-caps;
+	font-style: normal;
+	border-bottom: 0;
+	letter-spacing:0.1em;
+}
+
+cite, CITE ABBR, CITE ACRONYM, CITE .caps, em {
+	font-style: italic;
+	font-family: 'premiera italic', georgia, serif;
+}
+
+strong {
+	font-family: 'premiera bold', georgia, serif;
+	font-weight: bold;
+}
+
+img {
+	border: 0;
+}
+
+/* @group layout */
+
+#main {
+
+	width:61.8%;
+
+	float:left;
+}
+
+
+
+#supp {
+
+	margin-left:61.8%;
+}
+
+#main H1, #main H2, #main P, #main PRE, #main UL, #main OL, #main DL, #supp UL, #supp H3, #supp OL, #supp P, FORM, .example, #supp #deck {
+	padding: 0 11.8%;
+}
+
+H1 SPAN, #supp SPAN, #toc LI SPAN, .quote-from-book .ic, .thumb {
+	position: absolute;
+	text-align:right;
+	display:block;
+}
+
+H1 SPAN, #toc LI SPAN, .thumb {
+	left: -0.75em;
+	width:7.29%;
+	font-family: 'Premiera Book', georgia, serif;
+	-moz-font-feature-settings:"onum" 1;
+	-ms-font-feature-settings:"onum" 1;
+	-o-font-feature-settings:"onum" 1;
+	-webkit-font-feature-settings:"onum" 1;
+	font-feature-settings:"onum" 1;
+}
+
+h1 span {
+	left: -0.3em;
+}
+
+#supp SPAN {
+	left: -0.5em;
+	width: 11.8%;
+}
+
+#nextprev, H3 {
+	position: relative;
+}
+/* @end */
+
+/* @group typography */
+#main, #supp, #footer, #cover, .amzbox {
+	font: 1.0em/1.375em 'Premiera Book', georgia, serif;
+}
+
+h1, h2, h3, #header, #big-title #ts {
+	font-family: 'Premiera Book', Georgia, serif;}
+
+
+h1#big-title span {
+	font-style: italic;
+	font-family: 'premiera Italic', Georgia, serif;
+}
+
+a, a:visited, a:link, a:active, a:hover {
+
+	color: #00408F;
+	text-decoration: underline;
+
+}
+
+a:visited {
+	color:#666;
+}
+
+html>body a, html>body a:visited, html>body a:link, html>body a:active, html>body a:hover {
+	/* Need to hide borders on links from IE6 due to text-jog bug */
+
+	text-decoration: none;
+	border-bottom: 1px solid #F2ECDA;
+
+}
+
+
+
+html>body a:active, html>body a:hover {
+	border-bottom: 1px solid #999;
+}
+
+H1 {
+	font-weight: normal;
+	font-size: 1.5em;
+	line-height: 1.083333333333333em;
+	margin: 0 0 1.5em 0;
+}
+
+H2, H3 {
+	font-weight: normal;
+	font-size: 1.1875em; /* 19px */
+	margin: 1.157894736842105em 0; /* 22px */
+	text-indent: -0.052631578947368em; /* 1px */
+}
+H4 {
+	font-weight: normal;
+	font-size: 1em;
+	margin: 0 0 0.6875em 0;
+}
+
+#supp H2 { /* header*/
+	font-weight: normal;
+	font-size: 1em;
+	margin: 0;
+	position:absolute;
+	right: 4.5076%;
+	top: 1.375em;
+}
+
+#supp h2 a {
+	text-decoration: none;
+	border: 0;
+	color: #e7e7e7;
+}
+
+#supp h2 a:active, #supp h2 a:hover {
+	color: #fff;
+}
+
+#supp h3 {
+	margin-bottom: 0.578947368421053em; /* 11px */
+	margin-top: 1.736842105263158em; /* 33px*/
+}
+
+
+BLOCKQUOTE {
+	margin-left: 0;
+	margin-right: 0;
+	font-style: italic;
+	font-family: 'premiera italic', georgia, serif;
+}
+
+.quote-from-book {
+	position: relative;
+}
+
+.quote-from-book .ic {
+	left: 0px;
+	width: 11.8%;
+}
+
+UL, OL, DL {
+	margin: 1.375em 0 1.375em 0;
+}
+
+LI, DD, DT {
+	margin: 0;
+}
+
+DD {
+	margin-left: 1.375em;
+}
+
+P {
+	margin-top: 1.375em;
+	margin-bottom: 0;
+}
+
+P + P {
+	margin-top: 0;
+	text-indent: 1.375em;
+}
+
+p.imgholder {
+	margin-top: 1.375em;
+	margin-bottom: 1.375em;
+	text-align: center;
+	text-indent: 0;
+}
+
+Q {
+font-style:italic;
+quotes: '\2018' '\2019' '\201C' '\201D';
+	font-family: 'premiera italic', georgia, serif;
+}
+
+Q:before {
+content: '\2018';
+}
+
+Q:after {
+content: '\2019';
+}
+
+HTML > BODY Q {
+font-style:normal;
+}
+
+BODY BLOCKQUOTE Q {
+	font-style:italic;
+}
+
+CODE {
+	font-family: 'lucida console', 'andale mono', 'monotype.com', monospace;
+	font-size: 0.875em;
+}
+
+code code {
+	font-size: 1em;
+}
+
+PRE {
+	margin: 1.375em 0 0 1.375em;
+}
+
+BLOCKQUOTE EM {
+	font-style: normal;
+	font-family: 'Premiera Book', georgia, serif;
+}
+
+UL UL, OL OL {
+	margin-left: 1.375em;
+}
+
+#main LI P {
+	padding: 0;
+}
+
+H1 A:link, H1 A:visited, H1 A:hover, H1 A:active {
+	color: #333;
+	border: 0;
+}
+
+H2 A:link, H2 A:visited, H2 A:hover, H2 A:active {
+	text-decoration:none;
+	color: #fff;
+	border: 0;
+}
+
+#supp UL {
+	list-style:circle;
+	margin-top: 0.6875em;
+}
+
+OL#annotations {
+	list-style:lower-roman;
+}
+
+#nextprev LI {
+	list-style: none;
+}
+/* @end */
+
+
+/* @group header */
+#header {
+	font-size: 1.25em;
+	line-height: 1.1em;
+	color: #fff;
+	background: #400300 url(/i/newdrop.png) repeat-x bottom;
+	padding: 1.1em 1.1em 2.2em 1.1em;
+	margin:0 0 2.2em 0;
+}
+
+#header a {
+	color: #e7e7e7;
+	border: none;
+}
+
+#header a:hover, #header a:active {
+	color: #fff;
+}
+
+
+#header a span {
+	font-style: italic;
+	font-family: 'premiera italic', georgia, serif;
+}
+
+span.of {
+	margin-right: 0.1em;
+}
+/* @end */
+
+/* @group footer */
+#footer {
+	font-size: 0.875em;
+	clear:both;
+	margin: 0;
+	padding: 4.714285714285714em 0 1.571428571428571em 7.29%;
+	color: #999;
+}
+
+#footer a {
+	color: #999;
+}
+html>body #footer a {
+	border-bottom: 1px solid #F2ECDA;
+}
+/* @end */
+
+/* @group Bits and pieces */
+.author {
+	text-indent:0;
+	margin-top: 1em;
+}
+
+.bits h1 {
+	margin-top: -0.166666666666667em;
+	margin-bottom: 0.916666666666667em;
+}
+
+.bits #supp {
+	padding-top: 0.6875em;
+}
+
+#toc h3 {
+	margin-top: 1.736842105263158em; /* 33px */
+	margin-bottom: 0.578947368421053em; /* 11px */
+}
+
+OL#toc {
+	padding-right:0;
+}
+
+OL#toc OL {
+	margin-left: 0;
+	padding-left:0;
+	padding-right:0;
+	margin-top: 0;
+}
+
+OL#toc OL OL {
+	margin-top: 0;
+}
+
+.nobullets {
+	list-style:none;
+}
+
+.highlight {
+	background: #F2ECDA;
+}
+
+.thumb IMG {
+	height: 2.5em;
+	position: relative;
+	top: 2px;
+}
+
+.bracket {
+	font-style: normal;
+}
+
+/* @end */
+
+/* @group forms */
+FORM {
+	margin: 0 0 1.375em 0;
+}
+FORM DT {
+	margin:1em 0 0 0;
+}
+FORM DD {
+	margin: 0 0 1em 0;
+}
+INPUT, TEXTAREA {
+	font: 1.0em/1.375em georgia, "times new roman", serif;
+}
+INPUT.textbox, TEXTAREA {
+	border: 1px solid #999;
+	font: 1.0em/1.375em georgia, "times new roman", serif;
+	width:100%;
+}
+INPUT.button {
+	border-width: 1px;
+}
+/* @end */
+
+/* @group Examples */
+#main #box1, #main #box2 { /* 2.1.1 */
+	font-size:12px;
+	width:1em;
+	height:1em;
+	border:1px solid black;
+	margin-left: 11.8%;
+	text-align: center;
+	color: #aaa;
+	margin-top: 1.5em;
+	line-height: 1em;
+}
+
+#main #box2 { /* 2.1.1 */
+	font-size:60px;
+	margin-top: 0.3em;
+}
+
+.inex { /* inline example */
+	background-color: #aaa;
+}
+
+div.ex2-1-7 {
+	font-family: "univers bold condensed", impact, haettenschweiler, sans-serif;
+	font-size: 200%;
+	letter-spacing:0.1em;
+	margin-top:0.75em;
+	margin-left:0.75em;
+}
+
+div.ex2-1-8 {
+	margin-top:0.75em;
+	margin-left:0.75em;
+	font-size: 200%;
+}
+
+.ex2-1-8i {
+	letter-spacing: -0.1em;
+}
+
+div.ex2-1-9 {
+	margin-top:0.75em;
+	margin-left:0.75em;
+	font-size: 200%;
+	letter-spacing: -0.1em;
+}
+
+.ex2-1-10-toc1 {
+	margin: 0 3em 0 auto;
+}
+
+.ex2-1-10-toc1 th {
+	font-weight: normal;
+	text-align: right;
+	padding:0;
+}
+
+.ex2-1-10-toc1 td {
+	font-style: italic;
+	font-family: 'premiera italic', georgia, serif;
+	text-align: right;
+	padding: 0 0 0 0.5em;
+}
+
+.ex2-1-10-toc2 {
+	margin: 0 auto;
+}
+
+.ex2-1-10-toc2 th {
+	font-weight: normal;
+	text-align: right;
+	padding: 0 0.5em 0 0;
+}
+
+.ex2-1-10-toc2 td:before {
+	content: "\2022";
+	padding-right: 0.5em;
+}
+
+.ex2-1-10-toc2 td {
+	font-style: italic;
+	font-family: 'premiera italic', georgia, serif;
+	text-align: left;
+	padding:0;
+}
+
+.ex2-2-1ii {
+  font-size: 1.5em;
+  line-height: 0.85;
+  text-indent: -0.5em;
+  margin-top: 1.5em;
+  margin-left: 0.5em;
+}
+
+.ex2-2-1i {
+  line-height: 3;
+  border-top:1px solid #ccc;
+  border-bottom:1px solid #ccc;
+  margin-top: 1.5em;
+  text-align: center;
+}
+
+.ex2-2-2 {
+	margin-left: 1.5em;
+	margin-right: 3em;
+	position:relative;
+}
+
+.ex2-2-2 .basictext {
+	margin-left: 10em;
+}
+
+.ex2-2-2 .sidenote {
+	width: 9.6em;
+	position: absolute;
+	left: 0;
+	top: 0;
+	text-indent: 0;
+	font-size: 0.8333em;
+	line-height:1.8;
+}
+
+.ex2-3-2i {
+	text-indent:-1.5em;
+}
+
+.ex2-3-2ii:before {
+  content: "\2767";
+  padding-right: 0.4em;
+}
+
+.ex2-3-2iii {
+	margin-top: 1.5em;
+}
+
+#main .ex2-3-2iii p {
+	display: inline;
+	padding: 0;
+}
+.ex2-3-2iii p + p:before {
+	content: "\2761";
+	padding-right: 0.1em;
+	padding-left: 0.4em;
+}
+.ex2-3-4 {
+	margin-left:0;
+	margin-right:0;
+	font-style: normal;
+}
+
+.ex2-3-4 pre {
+	font-family: inherit;
+	display: table;
+	width: auto;
+	margin: 0 auto;
+}
+
+/* @end */
+
+
+/* @group Amazon box */
+.amzbox {
+	position:absolute;
+	width:380px;
+}
+
+.amzbox P, .amzbox UL {
+	margin: 0;
+}
+
+.amzbox P {
+	padding: 1.5em 38px 38px 51px;
+	font-style: italic;
+	font-family: 'premiera italic', georgia, serif;
+	background: url(/i/amz-drop.png)  bottom no-repeat;
+}
+
+.amzbox P.first {
+	padding:  36px 38px 1.5em 38px;
+	background:url(/i/amz-drop.png) top no-repeat;
+	font-style: normal;
+}
+
+.amzbox IMG {
+	float:left;
+	width: 57px;
+	height: 24px;
+	margin: 3px 1em 1em 0;
+}
+
+.amzbox UL {
+	padding: 0 38px 0 51px;
+	list-style-type: square;
+	background: url(/i/amz-drop.png) center no-repeat;
+}
+
+#amazonswitcher label {
+	white-space:nowrap;
+}
+/* @end */
+
+
+
+/* @group Deck ad */
+
+#deck {
+	margin-top: 3em;
+	width: 13.636363636363636em;
+}
+
+#supp #deck p {
+	margin: 0;
+	font-size: 14px;
+	line-height: 16px;
+	padding: 0;
+}
+
+/* @end */
