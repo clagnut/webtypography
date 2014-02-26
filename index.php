@@ -1,23 +1,18 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!DOCTYPE html>
+<html lang="en-gb">
 <head>
-
 <title>The Elements of Typographic Style Applied to the Web &ndash; a practical guide to web typography</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel='stylesheet' href='http://f.fontdeck.com/s/css/GERHYe/hNqcZuLwYNms1N98PLak/webtypography.net/1575.css' type='text/css' /><style type="text/css" media="screen"><!--
-@import "/css/screen.css?1";
---></style>
+<link rel="stylesheet" type="text/css" href="/css/screen.css" />
 <!--[if lte IE 7]>
 <link rel="stylesheet" type="text/css" href="/css/ie-lte-7.css" />
 <![endif]-->
+<link
+    rel="stylesheet"   
+    href="http://fontdeck.com/s/css/p+zwVqq4agQiKsiAkUNVfzsNquo/<?php echo $_SERVER['SERVER_NAME']; ?>/1575.css" 
+    type="text/css"
+/>
 <script type="text/javascript" src="/js/global.js"></script>
-<script type="text/javascript" src="/js/amz.js"></script>
-<meta name="MSSmartTagsPreventParsing" content="true" />
-<link rel="start" title="Home page" href="/" />
-<link rel="shortcut icon" href="/favicon.ico" />
-<link rel="alternate" type="application/rss+xml" title="RSS 2.0 feed" href="http://feeds.feedburner.com/webtype" />
-<script src="/mint/?js" type="text/javascript"></script>
 <style type="text/css">
 #cover {
 	color: #fff;
