@@ -8,6 +8,11 @@ BODY {
 	background: #FFF8E5;
 	font-size: 100%;
 	text-rendering: optimizeLegibility;
+	-moz-font-feature-settings:"onum" 1;
+	-ms-font-feature-settings:"onum" 1;
+	-o-font-feature-settings:"onum" 1;
+	-webkit-font-feature-settings:"onum" 1;
+	font-feature-settings:"onum" 1;
 }
 
 HTML>BODY, HTML>BODY#cover {
@@ -16,7 +21,11 @@ HTML>BODY, HTML>BODY#cover {
 
 ABBR, ACRONYM, .caps {
 	text-transform: lowercase;
-	font-variant:small-caps;
+	-moz-font-feature-settings:"smcp" 1;
+	-ms-font-feature-settings:"smcp" 1;
+	-o-font-feature-settings:"smcp" 1;
+	-webkit-font-feature-settings:"smcp" 1;
+	font-feature-settings:"smcp" 1;
 	font-style: normal;
 	border-bottom: 0;
 	letter-spacing:0.1em;
@@ -24,11 +33,11 @@ ABBR, ACRONYM, .caps {
 
 cite, CITE ABBR, CITE ACRONYM, CITE .caps, em {
 	font-style: italic;
-	font-family: 'premiera italic', georgia, serif;
+	font-family: 'Antwerp Italic', georgia, serif;
 }
 
 strong {
-	font-family: 'premiera bold', georgia, serif;
+	font-family: 'Antwerp Bold', georgia, serif;
 	font-weight: bold;
 }
 
@@ -65,12 +74,7 @@ H1 SPAN, #supp SPAN, #toc LI SPAN, .quote-from-book .ic, .thumb {
 H1 SPAN, #toc LI SPAN, .thumb {
 	left: -0.75em;
 	width:7.29%;
-	font-family: 'Premiera Book', georgia, serif;
-	-moz-font-feature-settings:"onum" 1;
-	-ms-font-feature-settings:"onum" 1;
-	-o-font-feature-settings:"onum" 1;
-	-webkit-font-feature-settings:"onum" 1;
-	font-feature-settings:"onum" 1;
+	font-family: 'Antwerp Regular', georgia, serif;
 }
 
 h1 span {
@@ -89,16 +93,18 @@ h1 span {
 
 /* @group typography */
 #main, #supp, #footer, #cover, .amzbox {
-	font: 1.0em/1.375em 'Premiera Book', georgia, serif;
+	font-size: 1em;
+	line-height: 1.375em;
+	font-family: 'Antwerp Regular', georgia, serif;
 }
 
 h1, h2, h3, #header, #big-title #ts {
-	font-family: 'Premiera Book', Georgia, serif;}
+	font-family: 'Antwerp Regular', Georgia, serif;}
 
 
 h1#big-title span {
 	font-style: italic;
-	font-family: 'premiera Italic', Georgia, serif;
+	font-family: 'Antwerp Italic', Georgia, serif;
 }
 
 a, a:visited, a:link, a:active, a:hover {
@@ -174,7 +180,7 @@ BLOCKQUOTE {
 	margin-left: 0;
 	margin-right: 0;
 	font-style: italic;
-	font-family: 'premiera italic', georgia, serif;
+	font-family: 'Antwerp Italic', georgia, serif;
 }
 
 .quote-from-book {
@@ -218,7 +224,7 @@ p.imgholder {
 Q {
 font-style:italic;
 quotes: '\2018' '\2019' '\201C' '\201D';
-	font-family: 'premiera italic', georgia, serif;
+	font-family: 'Antwerp Italic', georgia, serif;
 }
 
 Q:before {
@@ -252,7 +258,7 @@ PRE {
 
 BLOCKQUOTE EM {
 	font-style: normal;
-	font-family: 'Premiera Book', georgia, serif;
+	font-family: 'Antwerp Regular', georgia, serif;
 }
 
 UL UL, OL OL {
@@ -311,7 +317,7 @@ OL#annotations {
 
 #header a span {
 	font-style: italic;
-	font-family: 'premiera italic', georgia, serif;
+	font-family: 'Antwerp Italic', georgia, serif;
 }
 
 span.of {
@@ -402,11 +408,15 @@ FORM DD {
 	margin: 0 0 1em 0;
 }
 INPUT, TEXTAREA {
-	font: 1.0em/1.375em georgia, "times new roman", serif;
+	font-size: 1em;
+	line-height: 1.375em;
+	font-family: inherit;
 }
 INPUT.textbox, TEXTAREA {
 	border: 1px solid #999;
-	font: 1.0em/1.375em georgia, "times new roman", serif;
+	font-size: 1em;
+	line-height: 1.375em;
+	font-family: inherit;
 	width:100%;
 }
 INPUT.button {
@@ -473,7 +483,7 @@ div.ex2-1-9 {
 
 .ex2-1-10-toc1 td {
 	font-style: italic;
-	font-family: 'premiera italic', georgia, serif;
+	font-family: 'Antwerp Italic', georgia, serif;
 	text-align: right;
 	padding: 0 0 0 0.5em;
 }
@@ -495,7 +505,7 @@ div.ex2-1-9 {
 
 .ex2-1-10-toc2 td {
 	font-style: italic;
-	font-family: 'premiera italic', georgia, serif;
+	font-family: 'Antwerp Italic', georgia, serif;
 	text-align: left;
 	padding:0;
 }
@@ -587,7 +597,7 @@ div.ex2-1-9 {
 .amzbox P {
 	padding: 1.5em 38px 38px 51px;
 	font-style: italic;
-	font-family: 'premiera italic', georgia, serif;
+	font-family: 'Antwerp Italic', georgia, serif;
 	background: url(/i/amz-drop.png)  bottom no-repeat;
 }
 

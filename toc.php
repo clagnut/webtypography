@@ -1,8 +1,4 @@
 <?php
-// Turn on PHP Error Reporting
-ini_set("display_errors","2");
-ERROR_REPORTING(E_ALL);
-
 $dr = str_replace($_SERVER['SCRIPT_NAME'], '/includes/', $_SERVER['SCRIPT_FILENAME']);
 
 $data = require_once($dr . "data.inc.php");

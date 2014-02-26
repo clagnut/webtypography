@@ -1,0 +1,40 @@
+<blockquote class='quote-from-book'>	<p><span class='ic'>&#8220;</span>If text is set ragged right, the <em>word space</em> <span class='bracket'>(</span>the space between words<span class='bracket'>)</span> can be fixed and unchanging. If the text is <em>justified</em> <span class='bracket'>(</span>set flush left and right<span class='bracket'>)</span>, the word space must be elastic. In either case the size of the ideal word space varies from one circumstance to another, depending on factors such as letterfit, type color, and size. A loosely fitted or bold face will need a larger interval between the words. At larger sizes, when letterfit is tightened, the spacing of words can be tightened as well.&#8221;</p>
+ </blockquote>
+	<p>In <abbr title="Cascading Style Sheets">CSS</abbr>, word space is set with the <code>word-spacing</code> property which has a default value of <code>normal</code>. The default word space is equivalent to approximately 0.25&nbsp;em, although the exact value will depend on information encoded within the digital font file. To change the word spacing, you should specifiy a length in ems. This length is added to the existing word space; that is to say <code>word-spacing</code> does not set the actual space between words, it sets an increment to the existing spacing. For&nbsp;example:</p>
+
+<pre><code>P {
+  word-spacing:0.25em }
+H1 {
+  word-spacing:-0.125em }</code></pre>
+
+	<p>In the preceding example, word space in paragraphs is increased by 0.25&nbsp;em <span class='bracket'>(</span>effectively doubling it<span class='bracket'>)</span> and the word space in top level headings is decreased by 0.125&nbsp;em <span class='bracket'>(</span>effectively halving&nbsp;it<span class='bracket'>)</span>.</p>
+
+	<p>While in theory you could specify <code>word-spacing</code> in pixels or any other allowable unit of length, it is important to specify <code>word-spacing</code> in ems as that is the only way to guarantee the word space changes proportionately to the text size <span class='bracket'>(</span>when readers change their default text size, for&nbsp;example<span class='bracket'>)</span>.</p>
+
+	<h2>An explanation of&nbsp;ems</h2>
+
+	<p>Ems are so-called because they are thought to approximate the size of an uppercase letter M <span class='bracket'>(</span>and so are pronounced <q>emm</q><span class='bracket'>)</span>, although 1&nbsp;em is actually significantly larger than this. Bringhurst describes the em&nbsp;thus:</p>
+
+	<blockquote><p><span class='bracket'>[</span>t<span class='bracket'>]</span>he em is a sliding measure. One em is a distance equal to the type size. In 6&nbsp;point type, an em is 6&nbsp;points; in 12&nbsp;point type an em is 12&nbsp;points and in 60&nbsp;point type an em is 60&nbsp;points. Thus a one em space is proportionately the same in any&nbsp;size.</p></blockquote>
+
+	<p>To illustrate this principle in terms of <abbr title="Cascading Style Sheets">CSS</abbr>, consider these&nbsp;styles:</p>
+
+<pre><code>#box1 {
+  font-size:12px;
+  width:1em;
+  height:1em;
+  border:1px solid black }
+
+#box2 {
+  font-size:60px;
+  width:1em;
+  height:1em;
+  border:1px solid black }</code></pre>
+
+	<p>These styles will render like: </p>
+
+	<div id="box1">M</div>
+
+	<div id="box2">M</div>
+
+	<p>Note that both boxes have a height and width of 1&nbsp;em but because they have different font sizes, one box is bigger than the other. Box 1&nbsp;has a <code>font-size</code> of 12&nbsp;px so its width and height is also 12&nbsp;px; similarly the text of box 2&nbsp;is set to 60&nbsp;px and so its width and height are also&nbsp;60&nbsp;px.</p>
