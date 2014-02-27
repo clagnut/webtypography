@@ -9,4 +9,4 @@ The markup still holds up but you might consider the CSS to be a bit... 2005. Th
 
 ## Adding new items
 
-The site builds upon the individual guidelines written in Bringhurst's book. To add a new guideline, you should add an entry in the PHP array
+The site builds upon the individual guidelines written in Bringhurst's book. To add a new guideline, you should add an entry in the PHP array in `/includes/data.inc.php` and then create an HTML file with the main content in the `/items` folder.
