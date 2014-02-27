@@ -1,8 +1,4 @@
 <?php
-// Turn on PHP Error Reporting
-ini_set("display_errors","2");
-ERROR_REPORTING(E_ALL);
-
 $dr = str_replace($_SERVER['SCRIPT_NAME'], '/includes/', $_SERVER['SCRIPT_FILENAME']);
 $dr2 = str_replace("/includes/", "", $dr);	
 
@@ -21,7 +17,19 @@ if (!array_key_exists ($item_num, $items)) {
 	$item_ar = explode("." , $item_num);
 	$item_chapter = $item_ar[0];
 	$item_section = $item_ar[0] . "." . $item_ar[1];
-	$title = htmlentities($items[$item_num]);
+	$title = preventOrphans($items[$item_num]);
+}
+
+$keys = array_keys($items);
+$next_num = false;
+if (isset($keys[array_search($item_num, $keys)+1])) {
+	$next_num = $keys[array_search($item_num, $keys)+1];
+	$next_item = preventOrphans($items[$next_num]);
+}
+$prev_num = false;
+if (isset($keys[array_search($item_num, $keys)-1])) {
+	$prev_num = $keys[array_search($item_num, $keys)-1];
+	$prev_item = preventOrphans($items[$prev_num]);
 }
 ?>
 <!DOCTYPE html>
@@ -48,18 +56,18 @@ if (!array_key_exists ($item_num, $items)) {
 
 <ul id="nextprev">
 <?php
-if ($nexttitle) {
-	echo "<li><span>&#8594;</span><a href='/$nextnumber/' title='Read next guideline'>$nexttitle</a></li>";
+if ($next_num) {
+	echo "<li><span>&#8594;</span><a href='/$next_num' title='Read next guideline'>$next_item</a></li>";
 }
-if ($prevtitle) {
-	echo "<li><span>&#8592;</span><a href='/$prevnumber/' title='Read previous guideline'>$prevtitle</a></li>";
+if ($prev_num) {
+	echo "<li><span>&#8592;</span><a href='/$prev_num' title='Read previous guideline'>$prev_item</a></li>";
 }
 ?>
 </ul>
 
 <?php
 include($dr . "references.inc.php");
-include($dr . "fontdeck.inc.php");
+include($dr . "book.inc.php");
 ?>
 </div> <!-- /supp -->
 

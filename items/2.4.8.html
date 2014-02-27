@@ -1,0 +1,33 @@
+<blockquote class='quote-from-book'>	<p><span class='ic'>&#8220;</span>The stub-ends left when paragraphs <em>end</em> on the <em>first</em> line of a page are called <em>widows</em>. They have a past but not a future, and they look foreshortened and forlorn.&#8221;</p>
+ </blockquote>
+	<p>Comprehensive control for page breaks was introduced in <abbr title="Cascading Style Sheets">CSS</abbr> 2, however browser support is currently  limited to Opera 9. The only paging properties supported by Internet Explorer 7, Safari 3&nbsp;and Firefox 2&nbsp;are <code>page-break-before</code> and <code>page-break-after</code> <span class='bracket'>(</span>this is also true of <abbr title="Internet Explorer">IE</abbr>8&nbsp;beta and Firefox 3&nbsp;beta at time of&nbsp;writing<span class='bracket'>)</span>.</p>
+
+	<p>The <code>page-break-before</code> and <code>page-break-after</code> properties enable you to say that a page break should occur before or after the specified element. The following example starts a new page everytime an <code>h1</code> heading is encountered and after every <code>.section</code>&nbsp;block.</p>
+
+<pre><code>h1 {
+   page-break-before:always }
+.section {
+   page-break-after:always }</code></pre>
+
+	<p>If you know <span class='bracket'>(</span>or can calculate<span class='bracket'>)</span> when a paragraph will be split over two pages, you could achieve some crude widow and orphan control by giving that paragraph a relevant class and forcing a page break before it, for&nbsp;example:</p>
+
+<pre><code>.dontsplit {
+   page-break-before:always }</code></pre>
+
+	<p>In reality that is not a likely situation and would always be problematic if readers set their browsers to print out different size text, or use different size paper, to your assumptions. </p>
+
+	<h2>The&nbsp;Future</h2>
+
+	<p>In essence widow and orphan control is not currently possible for the vast majority of people. However <abbr title="Cascading Style Sheets">CSS</abbr> 2&nbsp;support will increase with time so if you are writing a print style sheet it is worth considering the properties already specified in <abbr title="Cascading Style Sheets">CSS</abbr>&nbsp;2.</p>
+
+	<p>A relative of the <code>page-break-after</code> property mentioned earlier is <code>page-break-inside</code> which stops elements spanning pages. For example you may like to apply this rule to all&nbsp;headings:</p>
+
+<pre><code>h1, h2, h3, h4, h5, h6 {
+   page-break-inside:never }</code></pre>
+
+	<p>Precise widow and orphan control is also available through the <code>widows</code> and <code>orphans</code> properties. The value of the property is the minimum number of lines which is allowed to be widowed or orphaned. For example you can prevent less than four lines of a paragraph being left behind or printed on a new page using the&nbsp;following:</p>
+
+<pre><code>p {
+   widows:4;
+   orphans:4 }</code></pre>
+ 

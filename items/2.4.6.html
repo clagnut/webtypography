@@ -1,0 +1,14 @@
+<blockquote class='quote-from-book'>	<p><span class='ic'>&#8220;</span>Hard spaces are useful for preventing line-breaks within phrases such as <em>6.2&nbsp;mm</em>, <em>3&nbsp;in.</em>, <em>4&nbsp;&times;&nbsp;4</em>, or in phrases like <em>page&nbsp;3</em> and <em>chapter&nbsp;5</em>.&#8221;</p>
+ </blockquote>
+	<p>In <abbr title="HyperText Mark-up Language">HTML</abbr> the hard space character is known as a non-breaking space and is inserted using the entity <code>&amp;nbsp;</code>, for&nbsp;example:</p>
+
+<pre><code>1&amp;nbsp;inch is equivalent to 2.54&amp;nbsp;cm.</code></pre>
+
+	<p>It should not really be expected of authors to type <code>&amp;nbsp;</code> everytime a non-breaking space is required. This is a job that, to some degree, can be performed automatically by a content management system. To demonstrate this by way of simple <abbr title="PHP HyperText Processor">PHP</abbr> example, a regular expression function could automatically insert non-breaking spaces as&nbsp;follows:</p>
+
+<pre><code>$search = '/<span class='bracket'>(</span><span class='bracket'>[</span>0-9<span class='bracket'>]</span><span class='bracket'>)</span> <span class='bracket'>(</span><span class='bracket'>[</span>a-zA-Z<span class='bracket'>]</span><span class='bracket'>)</span>/';
+$replace = '$1&amp;nbsp;$2';
+$text = preg_replace<span class='bracket'>(</span>$search,$replace,$text<span class='bracket'>)</span>;</code></pre>
+
+	<p>This function looks for sequences of a number followed by a space followed by a letter and replaces the space with a non-breaking space. This would deal with instances such as <em>2.54&nbsp;cm</em>. For phrases like <em>chapter 5</em> it would be better to create a set of watch-words rather than attaching every number to a preceding string. Additionally rules would need to be created to handle common mathematical operators as in <em>4&nbsp;&times;&nbsp;4</em>.</p>
+ 

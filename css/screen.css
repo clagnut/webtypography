@@ -1,11 +1,8 @@
-@import "/css/css3.css";
-
-
-BODY {
+body {
 	margin:0;
 	padding:0;
 	color: #000;
-	background: #FFF8E5;
+	background: #fff8e5;
 	font-size: 100%;
 	text-rendering: optimizeLegibility;
 	-moz-font-feature-settings:"onum" 1;
@@ -15,11 +12,11 @@ BODY {
 	font-feature-settings:"onum" 1;
 }
 
-HTML>BODY, HTML>BODY#cover {
+html>body, html>body#cover {
 	font-size: 16px;
 }
 
-ABBR, ACRONYM, .caps {
+abbr, acronym, .caps {
 	text-transform: lowercase;
 	-moz-font-feature-settings:"smcp" 1;
 	-ms-font-feature-settings:"smcp" 1;
@@ -28,16 +25,15 @@ ABBR, ACRONYM, .caps {
 	font-feature-settings:"smcp" 1;
 	font-style: normal;
 	border-bottom: 0;
-	letter-spacing:0.1em;
 }
 
-cite, CITE ABBR, CITE ACRONYM, CITE .caps, em {
+cite, cite abbr, cite acronym, cite .caps, em {
 	font-style: italic;
-	font-family: 'Antwerp Italic', georgia, serif;
+	font-family: premiera, 'premiera italic', georgia, serif;
 }
 
 strong {
-	font-family: 'Antwerp Bold', georgia, serif;
+	font-family: premiera, 'premiera bold', georgia, serif;
 	font-weight: bold;
 }
 
@@ -61,32 +57,32 @@ img {
 	margin-left:61.8%;
 }
 
-#main H1, #main H2, #main P, #main PRE, #main UL, #main OL, #main DL, #supp UL, #supp H3, #supp OL, #supp P, FORM, .example, #supp #deck {
+#main h1, #main h2, #main p, #main pre, #main ul, #main ol, #main dl, #supp ul, #supp h3, #supp ol, #supp p, form, .example, #supp #deck {
 	padding: 0 11.8%;
 }
 
-H1 SPAN, #supp SPAN, #toc LI SPAN, .quote-from-book .ic, .thumb {
+h1 span, #supp span, #toc li span, .quote-from-book .ic, .thumb {
 	position: absolute;
 	text-align:right;
 	display:block;
 }
 
-H1 SPAN, #toc LI SPAN, .thumb {
+h1 span, #toc li span, .thumb {
 	left: -0.75em;
 	width:7.29%;
-	font-family: 'Antwerp Regular', georgia, serif;
+	font-family: premiera, 'premiera regular', georgia, serif;
 }
 
 h1 span {
 	left: -0.3em;
 }
 
-#supp SPAN {
+#supp span {
 	left: -0.5em;
 	width: 11.8%;
 }
 
-#nextprev, H3 {
+#nextprev, h3 {
 	position: relative;
 }
 /* @end */
@@ -95,21 +91,21 @@ h1 span {
 #main, #supp, #footer, #cover, .amzbox {
 	font-size: 1em;
 	line-height: 1.375em;
-	font-family: 'Antwerp Regular', georgia, serif;
+	font-family: premiera, 'premiera regular', georgia, serif;
 }
 
 h1, h2, h3, #header, #big-title #ts {
-	font-family: 'Antwerp Regular', Georgia, serif;}
+	font-family: premiera, 'premiera regular', georgia, serif;}
 
 
 h1#big-title span {
 	font-style: italic;
-	font-family: 'Antwerp Italic', Georgia, serif;
+	font-family: premiera, 'premiera italic', georgia, serif;
 }
 
 a, a:visited, a:link, a:active, a:hover {
 
-	color: #00408F;
+	color: #00408f;
 	text-decoration: underline;
 
 }
@@ -119,10 +115,10 @@ a:visited {
 }
 
 html>body a, html>body a:visited, html>body a:link, html>body a:active, html>body a:hover {
-	/* Need to hide borders on links from IE6 due to text-jog bug */
+	/* need to hide borders on links from ie6 due to text-jog bug */
 
 	text-decoration: none;
-	border-bottom: 1px solid #F2ECDA;
+	border-bottom: 1px solid #f2ecda;
 
 }
 
@@ -132,26 +128,26 @@ html>body a:active, html>body a:hover {
 	border-bottom: 1px solid #999;
 }
 
-H1 {
+h1 {
 	font-weight: normal;
 	font-size: 1.5em;
 	line-height: 1.083333333333333em;
 	margin: 0 0 1.5em 0;
 }
 
-H2, H3 {
+h2, h3 {
 	font-weight: normal;
 	font-size: 1.1875em; /* 19px */
 	margin: 1.157894736842105em 0; /* 22px */
 	text-indent: -0.052631578947368em; /* 1px */
 }
-H4 {
+h4 {
 	font-weight: normal;
 	font-size: 1em;
 	margin: 0 0 0.6875em 0;
 }
 
-#supp H2 { /* header*/
+#supp h2 { /* header*/
 	font-weight: normal;
 	font-size: 1em;
 	margin: 0;
@@ -176,11 +172,11 @@ H4 {
 }
 
 
-BLOCKQUOTE {
+blockquote {
 	margin-left: 0;
 	margin-right: 0;
 	font-style: italic;
-	font-family: 'Antwerp Italic', georgia, serif;
+	font-family: premiera, 'premiera italic', georgia, serif;
 }
 
 .quote-from-book {
@@ -192,24 +188,24 @@ BLOCKQUOTE {
 	width: 11.8%;
 }
 
-UL, OL, DL {
+ul, ol, dl {
 	margin: 1.375em 0 1.375em 0;
 }
 
-LI, DD, DT {
+li, dd, dt {
 	margin: 0;
 }
 
-DD {
+dd {
 	margin-left: 1.375em;
 }
 
-P {
+p {
 	margin-top: 1.375em;
 	margin-bottom: 0;
 }
 
-P + P {
+p + p {
 	margin-top: 0;
 	text-indent: 1.375em;
 }
@@ -221,75 +217,75 @@ p.imgholder {
 	text-indent: 0;
 }
 
-Q {
+q {
 font-style:italic;
-quotes: '\2018' '\2019' '\201C' '\201D';
-	font-family: 'Antwerp Italic', georgia, serif;
+quotes: '\2018' '\2019' '\201c' '\201d';
+	font-family: premiera, 'premiera italic', georgia, serif;
 }
 
-Q:before {
+q:before {
 content: '\2018';
 }
 
-Q:after {
+q:after {
 content: '\2019';
 }
 
-HTML > BODY Q {
+html > body q {
 font-style:normal;
 }
 
-BODY BLOCKQUOTE Q {
+body blockquote q {
 	font-style:italic;
 }
 
-CODE {
-	font-family: 'lucida console', 'andale mono', 'monotype.com', monospace;
-	font-size: 0.875em;
+code {
+	font-family: inconsolata, consolas, "andale mono", "droid sans mono", menlo, monospace;
+	font-size-adjust: 0.457;
 }
 
 code code {
 	font-size: 1em;
 }
 
-PRE {
+pre {
 	margin: 1.375em 0 0 1.375em;
 }
 
-BLOCKQUOTE EM {
+blockquote em {
 	font-style: normal;
-	font-family: 'Antwerp Regular', georgia, serif;
+	font-family: premiera, 'premiera regular', georgia, serif;
 }
 
-UL UL, OL OL {
+ul ul, ol ol {
 	margin-left: 1.375em;
 }
 
-#main LI P {
+#main li p {
 	padding: 0;
 }
 
-H1 A:link, H1 A:visited, H1 A:hover, H1 A:active {
+h1 a:link, h1 a:visited, h1 a:hover, h1 a:active {
 	color: #333;
 	border: 0;
 }
 
-H2 A:link, H2 A:visited, H2 A:hover, H2 A:active {
+h2 a:link, h2 a:visited, h2 a:hover, h2 a:active {
 	text-decoration:none;
 	color: #fff;
 	border: 0;
 }
 
-#supp UL {
+#supp ul {
 	list-style:circle;
 	margin-top: 0.6875em;
 }
 
-OL#annotations {
+ol#annotations {
 	list-style:lower-roman;
 }
 
-#nextprev LI {
+#nextprev li {
 	list-style: none;
 }
 /* @end */
@@ -317,7 +313,7 @@ OL#annotations {
 
 #header a span {
 	font-style: italic;
-	font-family: 'Antwerp Italic', georgia, serif;
+	font-family: premiera, 'premiera italic', georgia, serif;
 }
 
 span.of {
@@ -330,7 +326,7 @@ span.of {
 	font-size: 0.875em;
 	clear:both;
 	margin: 0;
-	padding: 4.714285714285714em 0 1.571428571428571em 7.29%;
+	padding: 4.571428571em 7.29% 1.571428571em;
 	color: #999;
 }
 
@@ -338,11 +334,11 @@ span.of {
 	color: #999;
 }
 html>body #footer a {
-	border-bottom: 1px solid #F2ECDA;
+	border-bottom: 1px solid #f2ecda;
 }
 /* @end */
 
-/* @group Bits and pieces */
+/* @group bits and pieces */
 .author {
 	text-indent:0;
 	margin-top: 1em;
@@ -362,18 +358,18 @@ html>body #footer a {
 	margin-bottom: 0.578947368421053em; /* 11px */
 }
 
-OL#toc {
+ol#toc {
 	padding-right:0;
 }
 
-OL#toc OL {
+ol#toc ol {
 	margin-left: 0;
 	padding-left:0;
 	padding-right:0;
 	margin-top: 0;
 }
 
-OL#toc OL OL {
+ol#toc ol ol {
 	margin-top: 0;
 }
 
@@ -382,10 +378,10 @@ OL#toc OL OL {
 }
 
 .highlight {
-	background: #F2ECDA;
+	background: #f2ecda;
 }
 
-.thumb IMG {
+.thumb img {
 	height: 2.5em;
 	position: relative;
 	top: 2px;
@@ -398,33 +394,33 @@ OL#toc OL OL {
 /* @end */
 
 /* @group forms */
-FORM {
+form {
 	margin: 0 0 1.375em 0;
 }
-FORM DT {
+form dt {
 	margin:1em 0 0 0;
 }
-FORM DD {
+form dd {
 	margin: 0 0 1em 0;
 }
-INPUT, TEXTAREA {
+input, textarea {
 	font-size: 1em;
 	line-height: 1.375em;
 	font-family: inherit;
 }
-INPUT.textbox, TEXTAREA {
+input.textbox, textarea {
 	border: 1px solid #999;
 	font-size: 1em;
 	line-height: 1.375em;
 	font-family: inherit;
 	width:100%;
 }
-INPUT.button {
+input.button {
 	border-width: 1px;
 }
 /* @end */
 
-/* @group Examples */
+/* @group examples */
 #main #box1, #main #box2 { /* 2.1.1 */
 	font-size:12px;
 	width:1em;
@@ -483,7 +479,7 @@ div.ex2-1-9 {
 
 .ex2-1-10-toc1 td {
 	font-style: italic;
-	font-family: 'Antwerp Italic', georgia, serif;
+	font-family: premiera, 'premiera italic', georgia, serif;
 	text-align: right;
 	padding: 0 0 0 0.5em;
 }
@@ -505,7 +501,7 @@ div.ex2-1-9 {
 
 .ex2-1-10-toc2 td {
 	font-style: italic;
-	font-family: 'Antwerp Italic', georgia, serif;
+	font-family: premiera, 'premiera italic', georgia, serif;
 	text-align: left;
 	padding:0;
 }
@@ -584,37 +580,37 @@ div.ex2-1-9 {
 /* @end */
 
 
-/* @group Amazon box */
+/* @group amazon box */
 .amzbox {
 	position:absolute;
 	width:380px;
 }
 
-.amzbox P, .amzbox UL {
+.amzbox p, .amzbox ul {
 	margin: 0;
 }
 
-.amzbox P {
+.amzbox p {
 	padding: 1.5em 38px 38px 51px;
 	font-style: italic;
-	font-family: 'Antwerp Italic', georgia, serif;
+	font-family: premiera, 'premiera italic', georgia, serif;
 	background: url(/i/amz-drop.png)  bottom no-repeat;
 }
 
-.amzbox P.first {
+.amzbox p.first {
 	padding:  36px 38px 1.5em 38px;
 	background:url(/i/amz-drop.png) top no-repeat;
 	font-style: normal;
 }
 
-.amzbox IMG {
+.amzbox img {
 	float:left;
 	width: 57px;
 	height: 24px;
 	margin: 3px 1em 1em 0;
 }
 
-.amzbox UL {
+.amzbox ul {
 	padding: 0 38px 0 51px;
 	list-style-type: square;
 	background: url(/i/amz-drop.png) center no-repeat;
@@ -627,7 +623,7 @@ div.ex2-1-9 {
 
 
 
-/* @group Deck ad */
+/* @group deck ad */
 
 #deck {
 	margin-top: 3em;

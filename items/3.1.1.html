@@ -1,0 +1,28 @@
+
+<blockquote class='quote-from-book'>	<p><span class='ic'>&#8220;</span>In the sixteenth century, a series of common sizes developed among European typographers, and the series survived with little change and few additions for 400&nbsp;years. <span class='bracket'>[</span>...<span class='bracket'>]</span> Use the old familiar scale, or use new scales of your own devising, but limit yourself, at first, to a modest set of distinct and related intervals.&#8221;</p>
+ </blockquote>
+	<p>Sizing text in <abbr title="Cascading Style Sheets">CSS</abbr> is achieved using the <code>font-size</code> property. In print, font sizes are specified absolutely, for example setting text at 12&nbsp;points implies a particular physical height for the printed text. On the web, font sizes can be set absolutely or relatively, and in a number of different units. What&#8217;s more, most web browsers enable the reader to resize the text to suit their own reading environment and&nbsp;requirements.</p>
+
+	<p>For text which is to be printed, the <code>font-size</code> property can and should be used to set in text in points, for&nbsp;example:</p>
+
+<pre><code>p { font-size:12pt }</code></pre>
+
+	<p>For text which is to be read on screen, the situation is slightly more complicated. Arguably the most appropriate unit is pixels which is a unit relative to the screen resolution. Setting text sizes in pixels gives web designers precision similar to that afforded to print designers. However, Internet Explorer does not allow readers to resize text set in pixels <span class='bracket'>(</span>although <abbr title="Internet Explorer">IE</abbr>7&nbsp;does provide full page zooming<span class='bracket'>)</span>, so we need to look to other&nbsp;units.</p>
+
+	<p>Sizing text using the <code>em</code> unit is the next most appropriate approach. The em is a true typographic unit and was <a href="/web/20140209211729/http://www.w3.org/WAI/GL/css2em.htm">recommended by the <abbr title="Worldwide Web Consortium">W3C</abbr></a> from the outset of <abbr title="Cascading Style Sheets">CSS</abbr>. Ems are a relative unit and act as multipliers based on the text element&#8217;s parent element. Thus, if the <code>body</code> of a web page has 16&nbsp;px text by default, making paragraphs render at 12&nbsp;px would require setting paragraphs at <code>0.75em</code>.</p>
+
+<pre><code>p { font-size:0.75em; /* 16x0.75=12 */ }</code></pre>
+
+	<p>One further problem arises with this method: <abbr title="Internet Explorer">IE</abbr>6&nbsp;and <abbr title="Internet Explorer">IE</abbr>7&nbsp;unacceptably exaggerate the smallness and largeness of the resized text. This can be solved by setting a percentage <code>font-size</code> on the <code>body</code>.</p>
+
+	<p>So choosing from the traditional scale, our final font sizing style sheet could look as&nbsp;follows:</p>
+
+<pre><code>body { font-size:100%; }
+h1 { font-size:2.25em;  /* 16x2.25=36 */ }
+h2 { font-size:1.5em;   /* 16x1.5=24 */ }
+h3 { font-size:1.125em; /* 16x1.125=18 */ }
+h4 { font-size:0.875em; /* 16x0.875=14 */ }
+p  { font-size:0.75em;  /* 16x0.75=12 */ }</code></pre>
+
+	<p>More details and analysis of font sizing can be found in <a href="/web/20140209211729/http://www.alistapart.com/articles/howtosizetextincss/">How to Size Text in <abbr title="Cascading Style Sheets">CSS</abbr></a>.</p>
+ 

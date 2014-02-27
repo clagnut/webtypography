@@ -1,0 +1,19 @@
+<blockquote class='quote-from-book'>	<p><span class='ic'>&#8220;</span>In the nineteenth century, which was a dark and inflationary age in typography and type design, many compositors were encouraged to stuff extra space between sentences. Generations of twentieth century typists were then taught to do the same, by hitting the spacebar twice after every period <span class='bracket'>[</span>full stop<span class='bracket'>]</span>. Your typing as well as your typesetting will benefit from unlearning this quaint Victorian habit. As a general rule, no more than a single space is required after a period, colon or any other mark of punctuation.&#8221;</p>
+ </blockquote>
+	<p>All white space in <abbr title="HyperText Mark-up Language">HTML</abbr>, in any combination of spaces, tabs or line breaks, is automatically collapsed to a single word space. Therefore this guideline is automatically adhered to regardless of your training as a&nbsp;typist.</p>
+
+	<p>If you do need to insert more than a single word space between sentences, or any other characters, then use one of the many <a href="/web/20140209214008/http://www.alanwood.net/unicode/general_punctuation.html" title="General Punctuation - Test for Unicode support in Web browsers">space characters available in Unicode</a>. Even if the character itself isn&#8217;t included in the current font, Unicode-aware browsers will display a good approximation. Avoid the temptation to use a non-breaking space, <code>&amp;nbsp;</code>, as this has a meaning in and of&nbsp;itself.</p>
+
+	<ul class='nobullets'>
+	<li><code>&amp;#8194;</code> en space <span class="inex">&#8194;</span></li>
+	<li><code>&amp;#8195;</code> em space <span class="inex">&#8195;</span></li>
+	<li><code>&amp;#8196;</code> 3-per-em space <span class="inex">&#8196;</span></li>
+	<li><code>&amp;#8197;</code> 4-per-em space <span class="inex">&#8197;</span></li>
+	<li><code>&amp;#8198;</code> 6-per-em space <span class="inex">&#8198;</span></li>
+	<li><code>&amp;#8199;</code> figure space <span class="inex">&#8199;</span></li>
+	<li><code>&amp;#8200;</code> punctuation space <span class="inex">&#8200;</span></li>
+	<li><code>&amp;#8201;</code> thin space <span class="inex">&#8201;</span></li>
+	<li><code>&amp;#8202;</code> hair space <span class="inex">&#8202;</span></li>
+
+</ul>
+	<p>Another method would be to apply the <code>white-space:pre</code> property in <abbr title="Cascading Style Sheets">CSS</abbr> to retain the white space formatting. However if you are using white space to format a passage of text, for instance computer code or poetry, then you should enclose the passage in a <code>pre</code> element as this is a more semantic way to preserve the white space pre-formatting.</p>

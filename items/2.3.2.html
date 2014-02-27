@@ -1,0 +1,83 @@
+<blockquote class='quote-from-book'>	<p><span class='ic'>&#8220;</span>Ornaments <span class='bracket'>[</span>...<span class='bracket'>]</span> drop lines <span class='bracket'>[</span>...<span class='bracket'>]</span> outdented paragraphs <span class='bracket'>[</span>...<span class='bracket'>]</span> and others, have their uses but the plainest, most unmistakable yet unobtrusive way of marking paragraphs is the simple indent.&#8221;</p>
+ </blockquote>
+	<p>Indenting the first line of a paragraph, or any block element is achieved in <abbr title="Cascading Style Sheets">CSS</abbr> using the text-indent&nbsp;property:</p>
+
+<pre><code>p {
+   text-indent:1em }</code></pre>
+
+	<p>The preceding rule will indent every paragraph, however we only wish to indent paragraphs that follow another paragraph. To achieve this, an adjacent sibling selector <span class='bracket'>(</span><code>+</code><span class='bracket'>)</span> can be&nbsp;used:</p>
+
+<pre><code>p + p {
+   text-indent:1em }</code></pre>
+
+	<p>Further, the line space between paragraphs which most browsers insert by default should be removed. Browsers create this line break by adding a top and bottom margin to paragraphs; the bottom margin should be removed from all paragraphs, and the top margin removed from those paragraphs which follow another&nbsp;paragraph:</p>
+
+<pre><code>p {
+   margin-bottom:0 }
+p + p {
+   text-indent:1em;
+   margin-top:0 }</code></pre>
+
+	<p>There is no limit to how much you indent by, but you may wish to start by describing a square. This can be achieved by setting your indent to the same value as your line-height.</p>
+
+	<p>It should be noted that Internet Explorer 6&nbsp;does not support the adjacent sibling selector. In the above examples, <abbr title="Internet Explorer">IE</abbr>6&nbsp;will not indent any paragraphs, instead paragraphs will be marked with a line&nbsp;break.</p>
+
+	<p>Indentation is not the only way to indicate a paragraph. The many alternatives include: simple block paragraphs, outdenting, ornamented indents, ornamentation within a continuous stream, or&nbsp;droplines.</p>
+
+	<h2>Block&nbsp;Paragraphs</h2>
+
+	<p>As stated earlier, block paragraphs &#8211; paragraphs separated by line breaks &#8211; are the default method used by web browsers. As explained in <a href="/web/20140209211703/http://webtypography.net/Rhythm_and_Proportion/Vertical_Motion/2.2.2/">&#167;2.2.2</a> the margins separating paragraphs should be set equal to the line-height in order that the rhythm of the text is&nbsp;maintained.</p>
+
+	<h2>Outdenting</h2>
+
+	<p class="ex2-3-2i">Marking paragraphs by outdenting them into the margin is achieved in the same manner as indenting: simply use a negative number for the indent.</p>
+
+<pre><code>p {
+   margin-bottom: 0 }
+p + p {
+   text-indent:-1.5em;
+   margin-top:0 }</code></pre>
+
+	<h2>Ornaments</h2>
+
+	<p class="ex2-3-2ii">Ornamented indentation, unlike standard indentation, does not necessarily require the use of <code>text-indent</code> to achieve the primary effect <span class='bracket'>(</span>although it can aid clarity<span class='bracket'>)</span>. The key to achieving this effect is the use of the <abbr title="Cascading Style Sheets">CSS</abbr> 2.1 <code>:before</code> pseudo-element to specify the ornamentation. The following example would insert a floral heart at the beginning of a subsequent paragraph:</p>
+
+<pre><code>p {
+   margin-bottom: 0 }
+p + p:before { 
+  content: "2767"; 
+  padding-right: 0.4em;
+  margin-top:0 }</code></pre>
+
+	<div class="example ex2-3-2iii"><p>In the above example, applying a <code>text-indent</code> to the paragraph would cause the ornament to be indented with the first line of the paragraph; to separate the ornament from the content, <code>padding-right</code> has been applied to the generated content.</p><p>Another use of ornaments as paragraph markers is to have a continuous stream of text with paragraphs separated by ornaments. To achieve this, the paragraphs should be set to display as <code>inline</code> elements, with ornamentation specified as before <span class='bracket'>(</span>in this case a decorative pilcrow is used in place of the floral heart bullet<span class='bracket'>)</span>:</p></div>
+
+<pre><code>p { display: inline }
+p + p:before { 
+  content: "2761"; 
+  padding-right: 0.1em;
+  padding-left: 0.4em }</code></pre>
+
+	<p>It should be noted that the afore mentioned rules for ornaments will not work in Internet Explorer <span class='bracket'>(</span>up to version 7&nbsp;at the time of writing<span class='bracket'>)</span> as it does not support the <code>content</code> property of <abbr title="Cascading Style Sheets">CSS</abbr>. Additionally Firefox on Windows <span class='bracket'>(</span>tested on <abbr>XP</abbr> SP2&nbsp;at the time of writing<span class='bracket'>)</span> will only display those ornaments which are contained within the current font. Essentially these limitations imply that the afore-mentioned technique cannot be relied upon to work on Windows machines at present. Alternative techniques would be to use background image instead, or to include actual images in the code which, if sized in ems, would resize in proportion to the&nbsp;text.</p>
+
+	<h2>Droplines</h2>
+
+	<p>Dropline paragraphs start one line down, at the horizontal place on the page that the previous paragraph finished. Unlike other styles mentioned, dropline paragraphs for long pieces of text are impossible to achieve consistently in <abbr title="Cascading Style Sheets">CSS</abbr> without exorbitantly long <abbr title="Cascading Style Sheets">CSS</abbr> files or <span class='bracket'>(</span>preferably<span class='bracket'>)</span> the aid of&nbsp;JavaScript.</p>
+
+	<p>A technique that can be applied is similar to that used for a continuous stream of text, in that it uses <code>display:inline</code> to achieve the horizontal positioning. Once the paragraphs are positioned horizontally, a relative top position equal to the line height applied to subsequent paragraphs can create the desired vertical positioning <span class='bracket'>(</span>and thus the full drop line&nbsp;effect<span class='bracket'>)</span>:</p>
+
+<pre><code>p {
+  display: inline; 
+  position: relative }
+p + p {top: 1.3em }</code></pre>
+
+	<p>The problem with this approach is that the vertical positioning is not relative to the previous paragraph, only the parent box, and so all paragraphs after the first dropped paragraph appear to simply be part of a continuous stream of text.  To achieve the full effect requires that each subsequent paragraph have a multiple of the original <code>top</code>&nbsp;position:</p>
+
+<pre><code>p {
+  display: inline; 
+  position: relative }
+p + p {top: 1.3em }
+p + p + p {top: 2.6em }
+p + p + p + p {top: 3.9em }</code></pre>
+
+	<p>Specifying top positions this way is clearly unwieldy, and a perfectly reasonable candidate for implementing in JavaScript. The technique might be applicable to display material where there are only short runs of&nbsp;text.</p>
+ 

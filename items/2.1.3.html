@@ -1,0 +1,37 @@
+
+<blockquote class='quote-from-book'>	<p><span class='ic'>&#8220;</span>In justified text, there is always a trade-off between evenness of word spacing and frequency of&nbsp;hyphenation.</p>
+
+	<p>Narrow measures &#8211; which prevent good justification &#8211; are commonly used when the text is set in multiple columns. Setting ragged right under these conditions will lighten the page and decrease its&nbsp;stiffness.</p>
+
+	<p>Many unserifed faces look best when set ragged no matter what the length of the measure. And mono-spaced fonts, which are common on typewriters, always look better set ragged.&#8221;</p>
+ </blockquote>
+	<p>Setting text justified or ragged is accomplished in <abbr title="Cascading Style Sheets">CSS</abbr> through the <code>text-align</code> property, as&nbsp;follows:</p>
+
+<pre><code>P {
+  text-align:left  /* ragged right */ }
+
+P {
+  text-align:right  /* ragged left */ }
+
+P {
+  text-align:justify }</code></pre>
+
+	<p>Effective justification of text can only be achieved if long words are hyphenated. <abbr title="HyperText Mark-up Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr> 2&nbsp;do not have any provision for automatic hyphenation and current Web browsers support, even for manual hyphenation, is&nbsp;poor.</p>
+
+	<p>So don&#8217;t justify text on the&nbsp;web.</p>
+
+	<h2>Future&nbsp;considerations</h2>
+
+	<p><abbr>CSS3</abbr>&nbsp;provides further refinement of justification within the <a href="/web/20140209213835/http://www.w3.org/TR/css3-text">Text Module</a>.  For European languages, the <code>text-justify</code> property provides two justification options: <code>inter-word</code> and <code>inter-character</code>.</p>
+
+	<p>Setting <code>inter-word</code> selects the simplest and fastest full justification behavior, which spreads the text evenly across the line by increasing the width of the space between words only. No expansion or compression occurs within the words, i.e. no additional letter spacing is&nbsp;created.</p>
+
+	<p>Setting <code>inter-character</code> selects the justification behavior in which both inter-word and inter-letter spacing can be expanded or reduced to spread the text across the whole line. This is the significantly slower and more sophisticated type of the full justify behaviour preferred in newspaper and magazines. Typically, compression is tried first. If unsuccessful, expansion occurs: inter-word spaces are expanded up to a threshold, and finally inter-letter expansion is performed. For&nbsp;example:</p>
+
+<pre><code>P {
+  text-align:justify;
+  text-justify:inter-character }</code></pre>
+
+	<p><abbr>CSS3</abbr>&nbsp;also provides last line alignment with the <code>text-align-last</code> property. Normally the last line in a paragraph of justified text would not be justified, however if <code>text-align-last</code> is set to <code>justify</code> then the last line will be also spread evenly across the line, although in most cases this would be highly undesirable from a typographical&nbsp;perspective.</p>
+
+	<p>A potentially more useful purpose for <code>text-align-last</code>, at least for display text, is to set it to <code>size</code>. With <code>size</code> selected, the line content is scaled to fit on the line, so a line with fewer characters will be displayed in a larger&nbsp;font.</p>

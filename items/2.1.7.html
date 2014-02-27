@@ -1,0 +1,19 @@
+
+<blockquote class='quote-from-book'>	<p><span class='ic'>&#8220;</span>A man who would letterspace lower case would steal sheep, Frederic Goudy liked to say. The reason for not letterspacing lower case is that it hampers legibility. But there are some lowercase alphabets to which this principle doesn&#8217;t apply. Moderate letterspacing can make a face such as lowercase Univers bold condensed <em>more</em> legible rather than less.&#8221;</p>
+ </blockquote>
+	<p>Letterspacing lower case on the Web is particularly risky as only some faces actually benefit from the treatment, and you can rarely guarantee which type face you will actually be&nbsp;transforming.</p>
+
+	<p>There are however some fairly common typefaces to which letterspacing could be applied. Vaguely similar to the Univers bold condensed mentioned by Bringhurst are Impact and Haettenschweiler. These faces would only be used for headings and could be letterspaced using the <code>letter-spacing</code> property as&nbsp;follows:</p>
+
+<pre><code>h2 {
+  font-family: "univers bold condensed",
+    impact, haettenschweiler, sans-serif;
+  font-size: 200%;
+  letter-spacing:0.1em; }</code></pre>
+
+	<p>This would render as&nbsp;follows:</p>
+
+	<div class="ex2-1-7 example">wharves and warfingers</div>
+
+	<p>Notice that the <code>letter-spacing</code> is specified in <code>ems</code> to ensure that the amount of kerning is applied in proportion to the text&nbsp;size.</p>
+ 

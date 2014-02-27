@@ -1,26 +1,37 @@
+<?php 
+// Turn on PHP Error Reporting
+#ini_set("display_errors","2");
+#ERROR_REPORTING(E_ALL);
+
+$dr = str_replace($_SERVER['SCRIPT_NAME'], '/includes/', $_SERVER['SCRIPT_FILENAME']);
+$data = require_once($dr . "data.inc.php");
+$items = $data['items'];
+
+$keys = array_keys($items);
+$latest_num = $keys[count($keys)-1];
+$latest = $items[$latest_num];
+?>
 <!DOCTYPE html>
 <html lang="en-gb">
 <head>
 <title>The Elements of Typographic Style Applied to the Web &ndash; a practical guide to web typography</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" type="text/css" href="/css/screen.css" />
-<!--[if lte IE 7]>
-<link rel="stylesheet" type="text/css" href="/css/ie-lte-7.css" />
-<![endif]-->
-<link
-    rel="stylesheet"   
-    href="http://fontdeck.com/s/css/p+zwVqq4agQiKsiAkUNVfzsNquo/<?php echo $_SERVER['SERVER_NAME']; ?>/1575.css" 
-    type="text/css"
-/>
-<script type="text/javascript" src="/js/global.js"></script>
+<?php include($dr . "headlinks.inc.php") ?>
 <style type="text/css">
+html {
+	min-height: 100%; /* force gradient to cover whole page */
+}
 #cover {
 	color: #fff;
-	background: #400300 url(/i/bg-home.gif) repeat-x top;
+	background-color: #400300;
+	background-image: -webkit-linear-gradient(top, #000, #400300); /* For Chrome and Safari */
+	background-image:    -moz-linear-gradient(top, #000, #400300); /* For old Fx (3.6 to 15) */
+	background-image:     -ms-linear-gradient(top, #000, #400300); /* For pre-releases of IE 10*/
+	background-image:      -o-linear-gradient(top, #000, #400300); /* For old Opera (11.1 to 12.0) */ 
+	background-image:         linear-gradient(to bottom, #000, #400300); /* Standard syntax; must be last */
 	padding: 4.5076% 7.2924%;
 }
 
-#cover H1 {
+#cover h1 {
 	font-size: 2.0625em;
 	line-height: 1.666666666666667em;
 	margin:0;
@@ -45,7 +56,7 @@ h1#big-title span#ts {
 	line-height1.375em;
 }
 
-#cover H2 {
+#cover h2 {
 	font-size: 1.5em;
 	line-height: 1.083333333333333em;
 	margin:0;
@@ -65,12 +76,12 @@ html>body #entrance a:hover {
 	border-bottom: 1px solid #fff;
 }
 
-#entrance UL {
+#entrance ul {
 	list-style:none;
 	padding-left: 0;
 }
 
-LI SPAN {
+li span {
 	position:absolute;
 }
 </style>
@@ -88,14 +99,9 @@ Applied <span>to the</span> Web
 <div id="entrance">
 <h2>A practical guide to web typography</h2>
 <ul>
-<li>Will return as soon as possible</li>
-<?php /*
-	<li><a href="/intro/">Read the 	Introduction
- </a></li>
+	<li><a href="/intro/">Read the 	Introduction</a></li>
 	<li><a href="/toc/">Table of Contents</a></li>
-	<li><span style="left:-3.5em">Latest: </span><a href="/Harmony_and_Counterpoint/Numerals__Capitals_and_Small_Caps/3.2.1/">3.2.1 	Use titling figures with full caps, and text figures in all other&nbsp;circumstances
- </a></li>
- */ ?>
+	<li><span style="left:-3.5em">Latest: </span><a href="/<?php echo $latest_num ?>"><?php echo $latest_num." ".$latest ?></a></li>
 </ul>
 </div>
 </body>

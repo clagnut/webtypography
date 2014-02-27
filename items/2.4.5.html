@@ -1,0 +1,20 @@
+<blockquote class='quote-from-book'>	<p><span class='ic'>&#8220;</span>In English one hyphenates <em>cab-ri-o-let</em> but in French <em>ca-brio-let</em>. The conventions of the individual language should, ideally, be followed even for single foreign words or brief quotations.&#8221;</p>
+ </blockquote>
+	<p>This guideline can be achieved on the Web when hyphenating manually. See <a href="/2.4.1" title="At hyphenated line-ends, leave at least two characters behind and take at least three forward">&sect;2.4.1</a> for more information on manual&nbsp;hyphenation.</p>
+
+	<h2>The&nbsp;Future</h2>
+
+	<p>Hyphenation will be included in the <a href="http://www.w3.org/TR/css3-text/#hyphenate"><abbr title="Cascading Style Sheets">CSS</abbr> 3 Text module</a>, but at the time of writing, the definition of the hyphenation feature is still very much up-in-the-air. Currently the <a href="http://www.w3.org/TR/2007/WD-css3-gcpm-20070205/#hyphenation"><abbr title="Cascading Style Sheets">CSS</abbr> 3 Paged Media module</a> has more details of the hyphenation properties originally&nbsp;proposed.</p>
+
+	<p>The choice of which hyphenation dictionary to use should be automatic depending on the natural language of the document. The document language should ordinarily be specified in the <abbr>HTTP</abbr> header, but can also be identified with&nbsp;markup:</p>
+
+<pre><code>&lt;html lang="en"&gt; ... &lt;/html&gt;</code></pre>
+
+	<p>The <a href="http://www.w3.org/TR/css3-text/#hyphenate"><abbr title="Cascading Style Sheets">CSS</abbr> 3 Text module</a> may also introduce a <code>hyphenate-dictionary</code> property to specify which hyphenation dictionary to use. For&nbsp;example:</p>
+
+<pre><code>html<span class='bracket'>[</span>lang=en<span class='bracket'>]</span> {
+  hyphenate-dictionary:url<span class='bracket'>(</span>hyph_en.dic<span class='bracket'>)</span> }
+html<span class='bracket'>[</span>lang=fr<span class='bracket'>]</span> {
+  hyphenate-dictionary:url<span class='bracket'>(</span>hyph_fr.dic<span class='bracket'>)</span> }</code></pre>
+
+	<p>A value  of <code>auto</code> would indicate that the built-in dictionaries, if any, should be&nbsp;used.</p>

@@ -1,4 +1,8 @@
 <?php
+// Turn on PHP Error Reporting
+#ini_set("display_errors","2");
+#ERROR_REPORTING(E_ALL);
+
 $dr = str_replace($_SERVER['SCRIPT_NAME'], '/includes/', $_SERVER['SCRIPT_FILENAME']);
 
 $data = require_once($dr . "data.inc.php");
@@ -38,7 +42,7 @@ foreach($chapters as $chapter_num => $chapter) {
 				$item_ar = explode("." , $item_num);
 				$item_section = $item_ar[0] . "." . $item_ar[1];				
 				if($item_section == $section_num) {
-					echo "<li id='$item_num'><span>$item_num </span><a href='/$item_num'>".htmlentities($item)."</a></li>\n";
+					echo "<li id='$item_num'><span>$item_num </span><a href='/$item_num'>".preventOrphans($item)."</a></li>\n";
 				}
 			}
 			echo "</ol>\n</li>\n";

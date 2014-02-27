@@ -1,0 +1,8 @@
+<blockquote class='quote-from-book'>	<p><span class='ic'>&#8220;</span>Names such as W.B. Yeats and J.C.L. Prillwitz need hair spaces, thin spaces or no spaces at all after the intermediary periods <span class='bracket'>[</span>full stops<span class='bracket'>]</span>. A normal word space follows the <em>last</em> period in the string.&#8221;</p>
+ </blockquote>
+	<p>Hair spaces and thin spaces are two of the many <a href="/web/20140209230324/http://www.alanwood.net/unicode/general_punctuation.html" title="General Punctuation - Test for Unicode support in Web browsers">space characters available in Unicode</a>. Even if the character itself isn&#8217;t included in the current font, Unicode-aware browsers will display a good approximation. Here&#8217;s how to use hair spaces and thin spaces,&nbsp;respectively:</p>
+
+<pre><code>W.&amp;#8202;B. Yeats
+J.&amp;#8201;C.&amp;#8201;L. Prillwitz</code></pre>
+
+	<p>Which renders as W.&#8202;B. Yeats and J.&#8201;C.&#8201;L. Prillwitz. Unfortunately some browsers which are less Unicode-aware will show square placeholder symbols instead of the required spaces, so until support improves, no space at all is probably the way to go in this&nbsp;instance.</p>
