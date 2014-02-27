@@ -29,18 +29,19 @@ OL {list-style:none}
 <ol id='toc'>
 	<li><a href="/">Front cover</a></li>
 	<li style="margin-bottom:1.5em"><a href="/intro/">Introduction</a></li>
-	
+
 <?php
 // Inefficient looping through the ToC data arrays, but heh it works doesn't it?
 foreach($chapters as $chapter_num => $chapter) {
 	echo "<li id='$chapter_num'><span>$chapter_num </span><h3>".htmlentities($chapter)."</h3>\n<ol>\n";
 	foreach($sections as $section_num => $section) {
-		$section_chapter = explode("." , $section_num)[0];
+		$section_chapter_ar = explode("." , $section_num);
+		$section_chapter = $section_chapter_ar[0];
 		if($section_chapter == $chapter_num) {
 			echo "<li id='$section_num'><span>$section_num </span><h4>".htmlentities($section)."</h4>\n<ol>\n";
 			foreach($items as $item_num => $item) {
 				$item_ar = explode("." , $item_num);
-				$item_section = $item_ar[0] . "." . $item_ar[1];				
+				$item_section = $item_ar[0] . "." . $item_ar[1];
 				if($item_section == $section_num) {
 					echo "<li id='$item_num'><span>$item_num </span><a href='/$item_num'>".preventOrphans($item)."</a></li>\n";
 				}
@@ -51,7 +52,7 @@ foreach($chapters as $chapter_num => $chapter) {
 	echo "</ol>\n</li>\n";
 }
 ?>
-	
+
 	<li><h3>Reference</h3>
 		<ol id="reference">
 			<li><a href="/bibliography/">Bibliography</a></li>
