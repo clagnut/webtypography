@@ -9,7 +9,7 @@ The markup still holds up but you might consider the CSS to be a bit... 2005. Th
 
 ## Requirements
 
-The site runs on PHP and probably requires PHP 5 to be safe (although I suspect PHP 4 will work just fine too). That's all really. Just download the zip into a folder and set yourself up with a virtual host and you're away.
+The site runs on PHP and probably requires PHP 5 to be safe (although I suspect PHP 4 will work just fine too). That's all really. Just download the zip into a folder and set yourself up with a virtual host and you're away. If you want the webfonts to work, you'll need to use the domain "webtypography.dev" as your virtual hostname.
 
 ## Adding new items
 
