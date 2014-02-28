@@ -377,7 +377,7 @@ ol#toc ol ol {
 	list-style:none;
 }
 
-.highlight {
+#toc *:target {
 	background: #f2ecda;
 }
 
@@ -578,49 +578,6 @@ div.ex2-1-9 {
 }
 
 /* @end */
-
-
-/* @group amazon box */
-.amzbox {
-	position:absolute;
-	width:380px;
-}
-
-.amzbox p, .amzbox ul {
-	margin: 0;
-}
-
-.amzbox p {
-	padding: 1.5em 38px 38px 51px;
-	font-style: italic;
-	font-family: premiera, 'premiera italic', georgia, serif;
-	background: url(/i/amz-drop.png)  bottom no-repeat;
-}
-
-.amzbox p.first {
-	padding:  36px 38px 1.5em 38px;
-	background:url(/i/amz-drop.png) top no-repeat;
-	font-style: normal;
-}
-
-.amzbox img {
-	float:left;
-	width: 57px;
-	height: 24px;
-	margin: 3px 1em 1em 0;
-}
-
-.amzbox ul {
-	padding: 0 38px 0 51px;
-	list-style-type: square;
-	background: url(/i/amz-drop.png) center no-repeat;
-}
-
-#amazonswitcher label {
-	white-space:nowrap;
-}
-/* @end */
-
 
 
 /* @group deck ad */
