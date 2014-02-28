@@ -34,6 +34,7 @@ if (isset($keys[array_search($item_num, $keys)-1])) {
 ?>
 <!DOCTYPE html>
 <html lang="en-gb">
+<head>
 <title><?php echo $title ?> | The Elements of Typographic Style Applied to the Web</title>
 <?php include($dr . "headlinks.inc.php") ?>
 </head>
