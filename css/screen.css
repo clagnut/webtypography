@@ -27,13 +27,20 @@ abbr, acronym, .caps {
 	border-bottom: 0;
 }
 
-cite, cite abbr, cite acronym, cite .caps, em {
+blockquote abbr, blockquote acronym, blockquote .caps,
+em abbr, em acronym, em .caps,
+cite abbr, cite acronym, cite .caps {
+  font-family: 'premiera book', georgia, serif;
+  font-style: normal;
+}
+
+cite, em {
 	font-style: italic;
-	font-family: premiera, 'premiera italic', georgia, serif;
+	font-family: 'premiera italic', georgia, serif;
 }
 
 strong {
-	font-family: premiera, 'premiera bold', georgia, serif;
+	font-family: 'premiera bold', georgia, serif;
 	font-weight: bold;
 }
 
@@ -70,7 +77,7 @@ h1 span, #supp span, #toc li span, .quote-from-book .ic, .thumb {
 h1 span, #toc li span, .thumb {
 	left: -0.75em;
 	width:7.29%;
-	font-family: premiera, 'premiera regular', georgia, serif;
+	font-family: 'premiera book', georgia, serif;
 }
 
 h1 span {
@@ -91,16 +98,16 @@ h1 span {
 #main, #supp, #footer, #cover, .amzbox {
 	font-size: 1em;
 	line-height: 1.375em;
-	font-family: premiera, 'premiera regular', georgia, serif;
+	font-family: 'premiera book', georgia, serif;
 }
 
 h1, h2, h3, #header, #big-title #ts {
-	font-family: premiera, 'premiera regular', georgia, serif;}
+	font-family: 'premiera book', georgia, serif;}
 
 
 h1#big-title span {
 	font-style: italic;
-	font-family: premiera, 'premiera italic', georgia, serif;
+	font-family: 'premiera italic', georgia, serif;
 }
 
 a, a:visited, a:link, a:active, a:hover {
@@ -176,7 +183,7 @@ blockquote {
 	margin-left: 0;
 	margin-right: 0;
 	font-style: italic;
-	font-family: premiera, 'premiera italic', georgia, serif;
+	font-family: 'premiera italic', georgia, serif;
 }
 
 .quote-from-book {
@@ -220,7 +227,7 @@ p.imgholder {
 q {
 font-style:italic;
 quotes: '\2018' '\2019' '\201c' '\201d';
-	font-family: premiera, 'premiera italic', georgia, serif;
+	font-family: 'premiera italic', georgia, serif;
 }
 
 q:before {
@@ -254,7 +261,7 @@ pre {
 
 blockquote em {
 	font-style: normal;
-	font-family: premiera, 'premiera regular', georgia, serif;
+	font-family: 'premiera book', georgia, serif;
 }
 
 ul ul, ol ol {
@@ -313,7 +320,7 @@ ol#annotations {
 
 #header a span {
 	font-style: italic;
-	font-family: premiera, 'premiera italic', georgia, serif;
+	font-family: 'premiera italic', georgia, serif;
 }
 
 span.of {
@@ -479,7 +486,7 @@ div.ex2-1-9 {
 
 .ex2-1-10-toc1 td {
 	font-style: italic;
-	font-family: premiera, 'premiera italic', georgia, serif;
+	font-family: 'premiera italic', georgia, serif;
 	text-align: right;
 	padding: 0 0 0 0.5em;
 }
@@ -501,7 +508,7 @@ div.ex2-1-9 {
 
 .ex2-1-10-toc2 td {
 	font-style: italic;
-	font-family: premiera, 'premiera italic', georgia, serif;
+	font-family: 'premiera italic', georgia, serif;
 	text-align: left;
 	padding:0;
 }
