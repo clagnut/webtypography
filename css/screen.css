@@ -17,12 +17,11 @@ html>body, html>body#cover {
 }
 
 abbr, acronym, .caps {
-	text-transform: lowercase;
-	-moz-font-feature-settings:"smcp" 1, "onum" 1;
-	-ms-font-feature-settings:"smcp" 1, "onum" 1;
-	-o-font-feature-settings:"smcp" 1, "onum" 1;
-	-webkit-font-feature-settings:"smcp" 1, "onum" 1;
-	font-feature-settings:"smcp" 1, "onum" 1;
+	-moz-font-feature-settings:"c2sc" 1, "onum" 1;
+	-ms-font-feature-settings:"c2sc" 1, "onum" 1;
+	-o-font-feature-settings:"c2sc" 1, "onum" 1;
+	-webkit-font-feature-settings:"c2sc" 1, "onum" 1;
+	font-feature-settings:"c2sc" 1, "onum" 1;
 	font-style: normal;
 	border-bottom: 0;
 }
