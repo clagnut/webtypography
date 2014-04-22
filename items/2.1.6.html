@@ -1,6 +1,6 @@
-<blockquote class='quote-from-book'>	<p><span class='ic'>&#8220;</span>Acronyms such as <abbr>CIA</abbr> and <abbr>PLO</abbr> are frequent in some texts. So are abbreviations such as <abbr>CE</abbr> and <abbr>BCE</abbr> or <abbr>AD</abbr> and <abbr>BC</abbr>. The normal value for letterspacing these sequences of small or full caps is 5% to 10% of the type&nbsp;size.</p>
+<blockquote class='quote-from-book'>	<p><span class='ic'>“</span>Acronyms such as <abbr>CIA</abbr> and <abbr>PLO</abbr> are frequent in some texts. So are abbreviations such as <abbr>CE</abbr> and <abbr>BCE</abbr> or <abbr>AD</abbr> and <abbr>BC</abbr>. The normal value for letterspacing these sequences of small or full caps is 5% to 10% of the type&nbsp;size.</p>
 
-	<p>Many typographers like to letterspace all strings of numbers as well. Spacing is essential for rapid reading of long, fundamentally meaningless strings such as serial numbers, and is helpful even for shorter strings such as phone numbers and dates.&#8221;</p>
+	<p>Many typographers like to letterspace all strings of numbers as well. Spacing is essential for rapid reading of long, fundamentally meaningless strings such as serial numbers, and is helpful even for shorter strings such as phone numbers and dates.”</p>
  </blockquote>
 	<p>Letter spacing in <abbr title="Cascading Style Sheets">CSS</abbr> is achieved with the aptly named <code>letter-spacing</code> property. To letter space abbreviations at 10% of the type size you could wrap the abbreviations in <code>&lt;abbr&gt;</code> tags and apply a <abbr title="Cascading Style Sheets">CSS</abbr> rule such&nbsp;as:</p>
 
@@ -8,7 +8,7 @@
 
 	<p>If you have created static pages for your website then inserting <code>&lt;acronym&gt;</code> and <code>&lt;abbr&gt;</code> elements where appropriate might be slightly tedious but probably feasible. Dealing with text delivered by a content management system, however, is a different kettle of fish and would need some sort of automation. At this point your <abbr title="Content Management System">CMS</abbr> developer would probably turn to regular expressions. </p>
 
-	<p>I&#8217;m not going to explain regular expressions here &#8211; there are plenty of resources elsewhere on the web &#8211; but in the form of a <abbr title="PHP HyperText Processor">PHP</abbr> function here is an expression to get you&nbsp;started:</p>
+	<p>I’m not going to explain regular expressions here – there are plenty of resources elsewhere on the web – but in the form of a <abbr title="PHP HyperText Processor">PHP</abbr> function here is an expression to get you&nbsp;started:</p>
 
 <pre><code>$search = '/\b<span class='bracket'>(</span><span class='bracket'>[</span>A-Z<span class='bracket'>]</span><span class='bracket'>[</span>A-Z0-9<span class='bracket'>]</span>{2,}<span class='bracket'>)</span>\b/';
 $replace = '&lt;abbr&gt;$1&lt;/abbr&gt;';

@@ -1,4 +1,4 @@
-<blockquote class='quote-from-book'>	<p><span class='ic'>&#8220;</span>Kerning &#8211; altering the space between selected pairs of letters &#8211; can increase consistency of spacing in a word like Washington or Toronto, where the combinations <cite>Wa</cite> and <cite>To</cite> are kerned.&#8221;</p>
+<blockquote class='quote-from-book'>	<p><span class='ic'>“</span>Kerning – altering the space between selected pairs of letters – can increase consistency of spacing in a word like Washington or Toronto, where the combinations <cite>Wa</cite> and <cite>To</cite> are kerned.”</p>
  </blockquote>
 	<p>At present there is no mechanism within <abbr title="HyperText Mark-up Language">HTML</abbr> or <abbr title="Cascading Style Sheets">CSS</abbr> that specifically enables kerning. However text on the Web does not generally need manual kerning, as all digital fonts have kerning tables built-in. These tables define which letter pairs need adjusting and by how much, and are usually adhered to by operating systems. The only time manual kerning may prove necessary is with larger text such as that in headings, in particular when numbers, italics or punctuation are&nbsp;involved.</p>
 
@@ -17,7 +17,7 @@ and &lt;span class="kern"&gt;T&lt;/span&gt;oronto
 
 	<p>Notice that the <code>span</code> was applied around the first letter of the pair, not around both letters. This is because the <code>letter-spacing</code> property adds or removes space <strong>after each letter</strong>. Notice also that the <code>letter-spacing</code> is specified in <code>ems</code> to ensure that the amount of kerning is applied in proportion to the text&nbsp;size.</p>
 
-	<p>As with <a href="/web/20140209204454/http://webtypography.net/Rhythm_and_Proportion/Horizontal_Motion/2.1.6/">letterspacing strings of capitals</a>, adding a <code>span</code> every time you need to kern a letter pair could become tedious and so regular expressions could come to the rescue once more. This <abbr title="PHP HyperText Processor">PHP</abbr> function uses a regular expression to replace insert a <code>span</code> into any string of &#8216;To&#8217; or &#8216;Wa&#8217;:</p>
+	<p>As with <a href="/web/20140209204454/http://webtypography.net/Rhythm_and_Proportion/Horizontal_Motion/2.1.6/">letterspacing strings of capitals</a>, adding a <code>span</code> every time you need to kern a letter pair could become tedious and so regular expressions could come to the rescue once more. This <abbr title="PHP HyperText Processor">PHP</abbr> function uses a regular expression to replace insert a <code>span</code> into any string of ‘To’ or ‘Wa’:</p>
 
 <pre><code>$search = '/<span class='bracket'>(</span>T<span class='bracket'>)</span><span class='bracket'>(</span>o<span class='bracket'>)</span>|<span class='bracket'>(</span>W<span class='bracket'>)</span><span class='bracket'>(</span>a<span class='bracket'>)</span>/';
 $replace = '&lt;span class="kern"&gt;$1$3&lt;/span&gt;$2$4';
