@@ -13,8 +13,10 @@
 	<p>The <a href="http://www.w3.org/TR/css3-text/#hyphenate"><abbr title="Cascading Style Sheets">CSS</abbr> 3 Text module</a> may also introduce a <code>hyphenate-dictionary</code> property to specify which hyphenation dictionary to use. For&nbsp;example:</p>
 
 <pre><code>html<span class='bracket'>[</span>lang=en<span class='bracket'>]</span> {
-  hyphenate-dictionary:url<span class='bracket'>(</span>hyph_en.dic<span class='bracket'>)</span> }
+  hyphenate-dictionary:url<span class='bracket'>(</span>hyph_en.dic<span class='bracket'>)</span>;
+}
 html<span class='bracket'>[</span>lang=fr<span class='bracket'>]</span> {
-  hyphenate-dictionary:url<span class='bracket'>(</span>hyph_fr.dic<span class='bracket'>)</span> }</code></pre>
+  hyphenate-dictionary:url<span class='bracket'>(</span>hyph_fr.dic<span class='bracket'>)</span>;
+}</code></pre>
 
 	<p>A value  of <code>auto</code> would indicate that the built-in dictionaries, if any, should be&nbsp;used.</p>

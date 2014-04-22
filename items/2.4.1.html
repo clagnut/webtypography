@@ -18,11 +18,13 @@
 	<p>Until recently, the <a href="/web/20140209230237/http://www.w3.org/TR/css3-text/#hyphenate"><abbr title="Cascading Style Sheets">CSS</abbr> 3 Text module</a> contained the <code>hyphenate</code> property which could be set to <code>auto</code> or <code>none</code>. This property introduced the concept of automatic hyphenation to browsers, and would require that the web browser has a hyphenation dictionary for the language of the text being hyphenated. For&nbsp;example:</p>
 
 <pre><code>p {
-  hyphenate: auto; }</code></pre>
+  hyphenate: auto;
+}</code></pre>
 
 	<p>At the time of writing, the latest <a href="/web/20140209230237/http://www.w3.org/TR/2007/WD-css3-text-20070306/">Working Draft of March 2007</a>, states that the definition of the hyphenation feature is still very much up-in-the-air, but it&#8217;s likely that advanced hyphenation controls will be introduced. The <a href="/web/20140209230237/http://www.w3.org/TR/2007/WD-css3-gcpm-20070205/#hyphenation"><abbr title="Cascading Style Sheets">CSS</abbr> 3 Paged Media module</a> has more details of the hyphenation properties originally proposed, among these are the <code>hyphenate-before</code> and <code>hyphenate-after</code> properties which specify the minimum number of characters in a hyphenated word before and after the hyphenation character. For&nbsp;example:</p>
 
 <pre><code>p {
-  hyphenate-before:2;
-  hyphenate-after:3; }</code></pre>
+  hyphenate-before: 2;
+  hyphenate-after: 3;
+}</code></pre>
  

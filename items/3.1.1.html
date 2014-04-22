@@ -4,7 +4,7 @@
 
 	<p>For text which is to be printed, the <code>font-size</code> property can and should be used to set in text in points, for&nbsp;example:</p>
 
-<pre><code>p { font-size:12pt }</code></pre>
+<pre><code>p { font-size: 12pt; }</code></pre>
 
 	<p>For text which is to be read on screen, the situation is slightly more complicated. Arguably the most appropriate unit is pixels which is a unit relative to the screen resolution. Setting text sizes in pixels gives web designers precision similar to that afforded to print designers. However, Internet Explorer does not allow readers to resize text set in pixels <span class='bracket'>(</span>although <abbr title="Internet Explorer">IE</abbr>7&nbsp;does provide full page zooming<span class='bracket'>)</span>, so we need to look to other&nbsp;units.</p>
 
@@ -16,12 +16,12 @@
 
 	<p>So choosing from the traditional scale, our final font sizing style sheet could look as&nbsp;follows:</p>
 
-<pre><code>body { font-size:100%; }
-h1 { font-size:2.25em;  /* 16x2.25=36 */ }
-h2 { font-size:1.5em;   /* 16x1.5=24 */ }
-h3 { font-size:1.125em; /* 16x1.125=18 */ }
-h4 { font-size:0.875em; /* 16x0.875=14 */ }
-p  { font-size:0.75em;  /* 16x0.75=12 */ }</code></pre>
+<pre><code>body { font-size: 100%; }
+h1 { font-size: 2.25em;  /* 16x2.25=36 */ }
+h2 { font-size: 1.5em;   /* 16x1.5=24 */ }
+h3 { font-size: 1.125em; /* 16x1.125=18 */ }
+h4 { font-size: 0.875em; /* 16x0.875=14 */ }
+p  { font-size: 0.75em;  /* 16x0.75=12 */ }</code></pre>
 
 	<p>More details and analysis of font sizing can be found in <a href="http://www.alistapart.com/articles/howtosizetextincss/">How to Size Text in <abbr title="Cascading Style Sheets">CSS</abbr></a>.</p>
  

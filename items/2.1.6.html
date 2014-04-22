@@ -4,7 +4,9 @@
  </blockquote>
 	<p>Letter spacing in <abbr title="Cascading Style Sheets">CSS</abbr> is achieved with the aptly named <code>letter-spacing</code> property. To letter space abbreviations at 10% of the type size you could wrap the abbreviations in <code>&lt;abbr&gt;</code> tags and apply a <abbr title="Cascading Style Sheets">CSS</abbr> rule such&nbsp;as:</p>
 
-<pre><code>ABBR {letter-spacing:0.1em}</code></pre>
+<pre><code>abbr {
+  letter-spacing: 0.1em;
+}</code></pre>
 
 	<p>If you have created static pages for your website then inserting <code>&lt;acronym&gt;</code> and <code>&lt;abbr&gt;</code> elements where appropriate might be slightly tedious but probably feasible. Dealing with text delivered by a content management system, however, is a different kettle of fish and would need some sort of automation. At this point your <abbr title="Content Management System">CMS</abbr> developer would probably turn to regular expressions. </p>
 
