@@ -25,11 +25,11 @@ p {
 
 	<h2>Future&nbsp;considerations</h2>
 
-	<p><abbr>CSS3</abbr>&nbsp;provides further refinement of justification within the <a href="/web/20140209213835/http://www.w3.org/TR/css3-text">Text Module</a>.  For European languages, the <code>text-justify</code> property provides two justification options: <code>inter-word</code> and <code>inter-character</code>.</p>
+	<p><abbr>CSS3</abbr>&nbsp;provides further refinement of justification within the <a href="http://www.w3.org/TR/css3-text">Text Module</a>.  For European languages, the <code>text-justify</code> property provides two justification options: <code>inter-word</code> and <code>inter-character</code>.</p>
 
-	<p>Setting <code>inter-word</code> selects the simplest and fastest full justification behavior, which spreads the text evenly across the line by increasing the width of the space between words only. No expansion or compression occurs within the words, i.e. no additional letter spacing is&nbsp;created.</p>
+	<p>Setting <code>inter-word</code> selects the simplest and fastest full justification behaviour, which spreads the text evenly across the line by increasing the width of the space between words only. No expansion or compression occurs within the words, i.e. no additional letter spacing is&nbsp;created.</p>
 
-	<p>Setting <code>inter-character</code> selects the justification behavior in which both inter-word and inter-letter spacing can be expanded or reduced to spread the text across the whole line. This is the significantly slower and more sophisticated type of the full justify behaviour preferred in newspaper and magazines. Typically, compression is tried first. If unsuccessful, expansion occurs: inter-word spaces are expanded up to a threshold, and finally inter-letter expansion is performed. For&nbsp;example:</p>
+	<p>Setting <code>inter-character</code> selects the justification behaviour in which both inter-word and inter-letter spacing can be expanded or reduced to spread the text across the whole line. This is the significantly slower and more sophisticated type of the full justify behaviour preferred in newspaper and magazines. Typically, compression is tried first. If unsuccessful, expansion occurs: inter-word spaces are expanded up to a threshold, and finally inter-letter expansion is performed. For&nbsp;example:</p>
 
 <pre><code>p {
   text-align: justify;

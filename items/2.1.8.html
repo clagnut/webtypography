@@ -17,7 +17,9 @@ and &lt;span class="kern"&gt;T&lt;/span&gt;oronto
 
 	<p>Notice that the <code>span</code> was applied around the first letter of the pair, not around both letters. This is because the <code>letter-spacing</code> property adds or removes space <strong>after each letter</strong>. Notice also that the <code>letter-spacing</code> is specified in <code>ems</code> to ensure that the amount of kerning is applied in proportion to the text&nbsp;size.</p>
 
-	<p>As with <a href="/web/20140209204454/http://webtypography.net/Rhythm_and_Proportion/Horizontal_Motion/2.1.6/">letterspacing strings of capitals</a>, adding a <code>span</code> every time you need to kern a letter pair could become tedious and so regular expressions could come to the rescue once more. This <abbr title="PHP HyperText Processor">PHP</abbr> function uses a regular expression to replace insert a <code>span</code> into any string of ‘To’ or ‘Wa’:</p>
+
+	<p>As with <a href="/2.1.6">letterspacing strings of capitals</a>, adding a <code>span</code> every time you need to kern a letter pair could become tedious and so regular expressions could come to the rescue once more. This <abbr title="PHP HyperText Processor">PHP</abbr> function uses a regular expression to replace insert a <code>span</code> into any string of ‘To’ or ‘Wa’:</p>
+
 
 <pre><code>$search = '/<span class='bracket'>(</span>T<span class='bracket'>)</span><span class='bracket'>(</span>o<span class='bracket'>)</span>|<span class='bracket'>(</span>W<span class='bracket'>)</span><span class='bracket'>(</span>a<span class='bracket'>)</span>/';
 $replace = '&lt;span class="kern"&gt;$1$3&lt;/span&gt;$2$4';
@@ -25,5 +27,5 @@ $text = preg_replace<span class='bracket'>(</span>$search,$replace,$text<span cl
 
 	<h2>The&nbsp;Future</h2>
 
-	<p>The <a href="/web/20140209204454/http://www.w3.org/TR/2003/CR-css3-text-20030514/#kerning-props"><abbr>CSS3</abbr> Text Module</a> may contain the <code>kerning-mode</code> and <code>kerning-pair-threshold</code> properties to aid control over kerning, although these properties have yet to be fully&nbsp;defined.</p>
+	<p>The <a href="http://www.w3.org/TR/2003/CR-css3-text-20030514/#kerning-props"><abbr>CSS3</abbr> Text Module</a> may contain the <code>kerning-mode</code> and <code>kerning-pair-threshold</code> properties to aid control over kerning, although these properties have yet to be fully&nbsp;defined.</p>
  
