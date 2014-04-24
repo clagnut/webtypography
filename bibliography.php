@@ -32,7 +32,7 @@ $dr = str_replace($_SERVER['SCRIPT_NAME'], '/includes/', $_SERVER['SCRIPT_FILENA
 	<h2>References &#38;&nbsp;Tutorials</h2>
 
 	<dl>
-	<dt><a href="http://www.alanwood.net/unicode/index.html#links"><cite>Alan Wood&#8217;s Unicode Tests</cite></a> </dt>
+	<dt><a href="http://www.alanwood.net/unicode/index.html#links"><cite>Alan Wood’s Unicode Tests</cite></a> </dt>
 <dd>Massively comprehensive resource for locating and testing Unicode characters.</dd>
 <dt><a href="http://www.clagnut.com/blog/348/"><cite>How to size text using ems</cite></a> </dt>
 <dd>Tutorial on Clagnut which explains in detail how to size text on websites using ems. Covers the issues of inheritance and transitioning from pixel-based text sizing.</dd>

@@ -1,6 +1,6 @@
-<blockquote class='quote-from-book'>	<p><span class='ic'>&#8220;</span>Verse is usually set flush left and ragged right, and verse quotations within prose should not be deprived of their chosen form. But to distinguish verse quotations from surrounding prose, they should be indented or centered on the longest line.&#8221;</p>
+<blockquote class='quote-from-book'>	<p><span class='ic'>“</span>Verse is usually set flush left and ragged right, and verse quotations within prose should not be deprived of their chosen form. But to distinguish verse quotations from surrounding prose, they should be indented or centered on the longest line.”</p>
  </blockquote>
-	<p>When setting verse, whether on the web or otherwise, the primary concern is not to deprive it of its &#8220;chosen form&#8221;, including matters of spacing and visual structure <span class='bracket'>(</span>as this is considered, in many poetic works, to be at least as important as the words themselves<span class='bracket'>)</span>. As such, a <code>pre</code> <span class='bracket'>(</span>pre-formatted<span class='bracket'>)</span> element is most apt to setting&nbsp;verse.</p>
+	<p>When setting verse, whether on the web or otherwise, the primary concern is not to deprive it of its “chosen form”, including matters of spacing and visual structure <span class='bracket'>(</span>as this is considered, in many poetic works, to be at least as important as the words themselves<span class='bracket'>)</span>. As such, a <code>pre</code> <span class='bracket'>(</span>pre-formatted<span class='bracket'>)</span> element is most apt to setting&nbsp;verse.</p>
 
 <pre><code>&lt;blockquote class="verse"&gt;
 &lt;pre&gt;God guard me from those thoughts men think
@@ -14,7 +14,7 @@ Thinks in a marrow bone.&lt;/pre&gt;
 <pre><code>.verse pre {
   font-family: inherit; }</code></pre>
 
-	<p>A logical way to center the verse on the longest line would be to simply specify <code>width:auto</code> and <code>margin:0 auto</code>. Unfortunately, due to browsers&#8217; rendering of preformatted elements, the element will still be considered to comprise full-width lines, so no centering will occur. However we can work around this by specifying the <code>pre</code> element to display as a <code>table</code> as&nbsp;follows:</p>
+	<p>A logical way to center the verse on the longest line would be to simply specify <code>width:auto</code> and <code>margin:0 auto</code>. Unfortunately, due to browsers’ rendering of preformatted elements, the element will still be considered to comprise full-width lines, so no centering will occur. However we can work around this by specifying the <code>pre</code> element to display as a <code>table</code> as&nbsp;follows:</p>
 
 <pre><code>.verse pre {
   font-family: inherit;
@@ -55,7 +55,7 @@ Thinks in a marrow bone.&lt;/span&gt;&lt;/pre&gt;
 &lt;link rel="stylesheet" type="text/css" href="ie-lte-7.css" /&gt;
 &lt;!<span class='bracket'>[</span>endif<span class='bracket'>]</span>-&gt;</code></pre>
 
-	<p>Here&#8217;s the final rendered example of prose, set flush left &#38; ragged right, and centered on the longest&nbsp;line:</p>
+	<p>Here’s the final rendered example of prose, set flush left &#38; ragged right, and centered on the longest&nbsp;line:</p>
 
 	<div class="example"><blockquote class="ex2-3-4"><pre><span>God guard me from those thoughts men think
 In the mind alone;
