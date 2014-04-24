@@ -13,28 +13,43 @@
 	<p>This is a table of contents so it has been marked up as a simple&nbsp;table:</p>
 
 <pre><code>&lt;table&gt;
-  &lt;tr&gt;&lt;th&gt;Introduction&lt;/th&gt;
-  &lt;td&gt;7&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;th&gt;Chapter &lt;strong&gt;1&lt;/strong&gt;
-   The Sex of Centaurs&lt;/th&gt;&lt;td&gt;11&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;th&gt;Chapter &lt;strong&gt;2&lt;/strong&gt;
-   Poliphilo&amp;#8217;s Dream&lt;/th&gt;&lt;td&gt;11&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Introduction&lt;/th&gt;
+    &lt;td&gt;7&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th&gt;
+      Chapter &lt;strong&gt;1&lt;/strong&gt;
+      The Sex of Centaurs
+    &lt;/th&gt;
+    &lt;td&gt;11&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th&gt;
+      Chapter &lt;strong&gt;2&lt;/strong&gt;
+      Poliphilo&amp;#8217;s Dream
+    &lt;/th&gt;
+    &lt;td&gt;11&lt;/td&gt;
+  &lt;/tr&gt;
 &lt;/table&gt;</code></pre>
 
 	<p>The <abbr title="Cascading Style Sheets">CSS</abbr> looks like&nbsp;this:</p>
 
 <pre><code>table {
-  margin: 0 3em 0 auto; }
+  margin: 0 3em 0 auto;
+}
 
 th {
   font-weight: normal;
   text-align: right;
-  padding:0; }
+  padding: 0;
+}
 
 td {
   font-style: italic;
   text-align: right;
-  padding: 0 0 0 0.5em; }</code></pre>
+  padding: 0 0 0 0.5em;
+}</code></pre>
 
 	<p>While most of the <abbr title="Cascading Style Sheets">CSS</abbr> is straight forward, a point worth highlighting is the <code>margin</code> declaration for the <code>table</code> itself. There is a right margin of 3&nbsp;em to set the table in slightly from the right gutter and a left margin of <code>auto</code> to push the table over towards the right hand side of the&nbsp;page.</p>
 
@@ -61,21 +76,25 @@ td {
 	<p>The <abbr title="Cascading Style Sheets">CSS</abbr> looks like&nbsp;this:</p>
 
 <pre><code>table {
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 th {
   font-weight: normal;
   text-align: right;
-  padding: 0 0.5em 0 0; }
+  padding: 0 0.5em 0 0;
+}
 
 td:before {
   content: "2022";
-  padding-right: 0.5em; }
+  padding-right: 0.5em;
+}
 
 td {
   font-style: italic;
   text-align: left;
-  padding: 0; }</code></pre>
+  padding: 0;
+}</code></pre>
 
 	<p>There a couple of points worth noting in the <abbr title="Cascading Style Sheets">CSS</abbr>. The table has been centered by giving the left and right margins a value of <code>auto</code>. For block-level elements a <code>width</code> declaration would also be required when applying this technique, however tables have an inherent width so one does not need to be specified&nbsp;explicitly.</p>
 

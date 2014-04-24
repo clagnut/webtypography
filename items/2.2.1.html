@@ -5,7 +5,8 @@
 
 <pre><code>p {
   font-size: 12pt;
-  line-height: 15pt }</code></pre>
+  line-height: 15pt;
+}</code></pre>
 
 	<p>However <strong>that example is bad</strong> as <code>line-height</code> should never be applied using absolute units such as points or pixels. In the prior example, when text is resized in a browser, the font-size increases <span class='bracket'>(</span>to 18&nbsp;pt for example<span class='bracket'>)</span> but the line-height may remain at 15&nbsp;pt. So instead of the lines being spaced apart, they would actually&nbsp;overlap.</p>
 
@@ -13,12 +14,14 @@
 
 <pre><code>p {
   font-size: 12pt;
-  line-height: 1.25 }</code></pre>
+  line-height: 1.25;
+}</code></pre>
 
 	<p>In this example the value of <code>line-height</code> is a multiplier: 1.25&nbsp;x 12 = 15&nbsp;pt. This is a far more reliable method as the line-height <span class='bracket'>(</span>the distance between baselines<span class='bracket'>)</span> will always be proportional to the text size. Line height can be incorporated into the <code>font</code> property using a shorthand familiar to&nbsp;typographers:</p>
 
 <pre><code>p {
-  font: 12pt/1.25 "Minion Pro", "Minion Web", serif }</code></pre>
+  font: 12pt/1.25 "Minion Pro", "Minion Web", serif;
+}</code></pre>
 
 	<p>It should be noted that some browsers add a little leading by default: Safari and Internet Explorers for example; whereas others, such as Camino and Firefox, do not. Text on the web almost always benefits from an increase in line height, and figures upwards of 1.3&nbsp;are common <span class='bracket'>(</span>this page has a <code>line-height</code> of 1.5&nbsp;for&nbsp;example<span class='bracket'>)</span>.</p>
 
@@ -31,7 +34,8 @@
 <pre><code>.example {
   font-size: 1.5em;
   line-height: 0.85;
-  text-indent: -0.5em }</code></pre>
+  text-indent: -0.5em;
+}</code></pre>
 
 	<div class="ex2-2-1ii example">this is an&nbsp;example<br />
 of negative leading</div>
