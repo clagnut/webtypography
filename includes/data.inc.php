@@ -22,10 +22,10 @@ return array(
 	    '2.1.4' => "Use a single word space between sentences",
 	    '2.1.5' => "Add little or no space within strings of initials",
 	    '2.1.6' => "Letterspace all strings of capitals and small caps, and all long strings of digits",
-	    '2.1.7' => "Don't letterspace the lower case without a reason",
+	    '2.1.7' => "Don’t letterspace the lower case without a reason",
 	    '2.1.8' => "Kern consistently and modestly or not at all",
-	    '2.1.9' => "Don't alter the widths or shapes of letters without cause",
-	    '2.1.10' => "Don't stretch the space until it breaks",
+	    '2.1.9' => "Don’t alter the widths or shapes of letters without cause",
+	    '2.1.10' => "Don’t stretch the space until it breaks",
 		'2.2.1' => "Choose a basic leading that suits the typeface, text and measure",
 		'2.2.2' => "Add and delete vertical space in measured intervals",
 		'2.3.1' => "Set opening paragraphs flush left",
@@ -37,7 +37,7 @@ return array(
 		'2.4.5' => "Hyphenate according to the conventions of the language",
 		'2.4.6' => "Link short numerical and mathematical expressions with hard spaces",
 		'2.4.8' => "Never begin a page with the last line of a multi-line paragraph",
-		'3.1.1' => "Don't compose without a scale",
+		'3.1.1' => "Don’t compose without a scale",
 		'3.2.1' => "Use titling figures with full caps, and text figures in all other circumstances",
      
     )
