@@ -44,7 +44,7 @@ return array(
 );
 
 function preventOrphans($string) {
-	$string = htmlentities($string);
+	$string = htmlspecialchars($string);
 	$pattern = '/(.*) (\S*)$/i';
 	$replacement = '$1&nbsp;$2';
 	$string = preg_replace($pattern, $replacement, $string);
