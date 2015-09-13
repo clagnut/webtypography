@@ -58,10 +58,10 @@ if (isset($keys[array_search($item_num, $keys)-1])) {
 <ul id="nextprev">
 <?php
 if ($next_num) {
-	echo "<li><span>&#8594;</span><a href='/$next_num' title='Read next guideline'>$next_item</a></li>";
+	echo "<li><span>&#8594;</span><a href='/$next_num' title='Read next guideline' id='next_guideline'>$next_item</a></li>";
 }
 if ($prev_num) {
-	echo "<li><span>&#8592;</span><a href='/$prev_num' title='Read previous guideline'>$prev_item</a></li>";
+	echo "<li><span>&#8592;</span><a href='/$prev_num' title='Read previous guideline' id='previous_guideline'>$prev_item</a></li>";
 }
 ?>
 </ul>
