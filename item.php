@@ -74,5 +74,6 @@ include($dr . "book.inc.php");
 
 
 <?php include($dr . "footer.inc.php") ?>
+<script src="/js/global.js"></script>
 </body>
 </html>
