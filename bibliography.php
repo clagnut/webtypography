@@ -25,6 +25,8 @@ $dr = str_replace($_SERVER['SCRIPT_NAME'], '/includes/', $_SERVER['SCRIPT_FILENA
 	<dl>
 	<dt><span class="thumb"><img src="/i/tiny/bringhurst.png" alt="Book cover" /></span> <a href="http://www.amazon.co.uk/exec/obidos/ASIN/0881792128/jalfrezi-21/"><cite>The Elements of Typographic Style</cite></a> by Robert Bringhurst </dt>
 <dd>The book which sparked this website.</dd>
+	<dt><span class="thumb"><img src="/i/tiny/web-typography-book.png" alt="Web Typography book cover" /></span> <a href="http://book.webtypography.net"><cite>Web Typography</cite></a> by Richard Rutter </dt>
+<dd>A handbook for designing beautiful and effective responsive typography. The book this website grew into.</dd>
 <dt><span class="thumb"><img src="/i/tiny/gridsystems.png" alt="Book cover" /></span> <a href="http://www.amazon.co.uk/exec/obidos/ASIN/3721201450/jalfrezi-21/"><cite>Grid Systems in Graphic Design</cite></a> by Josef Muller-Brockmann </dt>
 <dd>The definitive word on using grid systems in graphic design. With examples on how to work correctly at a conceptual level and exact instructions for using all of the systems, this is as valid for the Web as it is for print.</dd>
 </dl>
