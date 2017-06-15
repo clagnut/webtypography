@@ -35,6 +35,9 @@ $dr = str_replace($_SERVER['SCRIPT_NAME'], '/includes/', $_SERVER['SCRIPT_FILENA
 	
 	<h2>Postscript</h2>
 	<p>In February 2014, I opened up the <a href="https://github.com/clagnut/webtypography">source code to this website</a> on GitHub, with <a href="http://clagnut.com/blog/2375/">an invitation</a> to web typography enthusiasts to take on the project, update the content and add the missing items. I will continue to maintain the website and update as changes are submitted.</p>
+	
+	<h2>Post postscript</h2>
+	<p>In 2017, after two years work, I released my book <cite><a href="http://book.webtypography.net">Web Typography</a></cite> as a handbook for designing beautiful and effective responsive typography. This website is the genesis of that book, and the book the natural (and hugely extended) result of this website.</p>
 
 </div> <!-- /main -->
 
