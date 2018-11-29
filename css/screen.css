@@ -26,6 +26,10 @@ abbr, acronym, .caps {
 	border-bottom: 0;
 }
 
+abbr {
+	text-underline-position: under;
+}
+
 blockquote abbr, blockquote acronym, blockquote .caps,
 em abbr, em acronym, em .caps,
 cite abbr, cite acronym, cite .caps {
