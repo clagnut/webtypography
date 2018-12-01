@@ -1,0 +1,17 @@
+<blockquote class='quote-from-book'>
+<p><span class='ic'>“</span>This is a good rule for just about everything except two-letter geographical acronyms and acronyms that stand for personal names. Thus: <span class="caps">3:00 AM</span>, <span class="caps">3:00 PM</span>, the ninth century <abbr>CE</abbr>, <span class="caps">450</span> <abbr>BC</abbr> to <abbr>AD</abbr> <span class="caps">450</span>, the <abbr>OAS</abbr> and <abbr>NATO</abbr>; World War <span class="caps">II</span> or <abbr>WWII</abbr>; but JFK and Fr J.A.S. O'Brien, <abbr>OMI</abbr>; <abbr>HMS</abbr> <em>Hypothesis</em> and <abbr>USS</abbr> <em>Ticonderoga</em>; Washington, DC, and Mexico, DF.<br />
+<span class='bracket'>[</span>…<span class='bracket'>]</span><br />
+Genuine small caps are not simply shrunken versions of the full caps. They differ from large caps in stroke weight, letterfit, and internal proportions as well as in height. Any good set of small caps is designed as such from the ground up. Thickening, shrinking and squashing the full caps with digital modification routines will only produce a parody.”</p></blockquote>
+
+<p><a href="https://docs.microsoft.com/en-us/typography/opentype/spec/">OpenType</a> supports the necessary features for this. These are well-supported by <code>font-variant-caps</code> and <code>font-variant-numeric</code> CSS properties from <a href="https://www.w3.org/TR/css-fonts-3/">Fonts Module Level 3</a>. These properties have wide support in browsers. The trickier part of applying them is to make sure you are enabling these features on fonts that support these features rather than asking the browser to create the shrunken ‘pardoy’ versions Bringhust mentions. For example even fonts that support small caps and oldstyle numbers are served without them by Google Fonts.</p>
+
+<pre><code>abbr {
+  font-variant-caps: all-small-caps;
+  font-variant-numeric: oldstyle-nums;
+  font-style: normal;
+}</code></pre>
+
+<p>For <code>font-variant-caps</code> the difference between <code>small-caps</code> and <code>all-small-caps</code> is that the former only affects lowercase letters. The latter will convert all text to small caps. <code>font-style: normal</code> is because vanishingly small numbers of fonts provide italicized small caps.</p>
+
+<blockquote class='quote-from-book'>
+<p><span class='ic'>“</span>They can be faked with digital machinery, by sloping the roman small caps, but it is better to choose a face … which includes them, or to live without.”</p></blockquote>
