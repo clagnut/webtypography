@@ -39,7 +39,8 @@ return array(
 		'2.4.8' => "Never begin a page with the last line of a multi-line paragraph",
 		'3.1.1' => "Don’t compose without a scale",
 		'3.2.1' => "Use titling figures with full caps, and text figures in all other circumstances",
-     
+    '3.2.2' => "For abbreviations and acronyms in the midst of normal text, use spaced small caps",
+
     )
 );
 
