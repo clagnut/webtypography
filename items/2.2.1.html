@@ -8,9 +8,9 @@
   line-height: 15pt;
 }</code></pre>
 
-	<p>However <strong>that example is bad</strong> as <code>line-height</code> should never be applied using absolute units such as points or pixels. In the prior example, when text is resized in a browser, the font-size increases <span class='bracket'>(</span>to 18&nbsp;pt for example<span class='bracket'>)</span> but the line-height may remain at 15&nbsp;pt. So instead of the lines being spaced apart, they would actually&nbsp;overlap.</p>
+	<p>That example will give you the same line-height throughout all your paragraphs, however it does introduce the danger that, when the browser text size is increased by your reader <span class='bracket'>(</span>to 18&nbsp;pt for example<span class='bracket'>)</span> the line-height may remain at 15&nbsp;pt. The result being that, instead of the lines being spaced apart, they would actually&nbsp;overlap.</p>
 
-	<p>A better approach is to use a unitless value. The preceding example could also be coded&nbsp;as:</p>
+	<p>A safer approach is to use a unitless value. The preceding example could also be coded&nbsp;as:</p>
 
 <pre><code>p {
   font-size: 12pt;
